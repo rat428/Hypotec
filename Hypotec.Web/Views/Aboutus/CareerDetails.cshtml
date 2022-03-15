@@ -1,0 +1,381 @@
+﻿@model Hypotec.Web.Models.CarrerDetailModel
+@{
+    ViewData["Title"] = "CareerDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start contact us page HTML code -->
+<section class="careerDetailsPage">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Job applied successfully .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong> Job applied failed .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.PostId == "0")
+        {
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="all-caption comm-text">
+                        <h2>Hypotec is looking for a fully-remote <span class="blue-text">CRM Administrator!</span></h2>
+                        <p>
+                            Hypotec has been and currently is an established leader in the Mortgage Industry for the past 15+ consecutive years! With licensing in 8+
+                            different states (and growing!), we have solidified our position in serving communities on a national level, for their mortgage needs.
+                        </p>
+                        <p>
+                            We are currently looking for a CRM Administrator to maintain, upgrade and manage our current CRM Software.
+                        </p>
+                        <div class="cdContent">
+                            <h5>Some of your duties will include, but are not limited to: </h5>
+                            <ul class="m-0">
+                                <li>Handling of all basic administrative functions including user account maintenance, reports and dashboards, workflows and other routine tasks as well as lead management within the CRM.</li>
+                                <li>Proactively engage on continuous improvement efforts for application design and support</li>
+                                <li>Participate in the planning and analysis of business requirements for system changes and enhancements.</li>
+                                <li>Refine CRM procedures and workflows to support sales teams</li>
+                                <li>Reviewing written business requirements and technical specifications.</li>
+                                <li>Investigating and analyzing reported defects</li>
+                                <li>Training staff to ensure familiarity with any revisions to the software.</li>
+                                <li>Setting up security parameters and undertake audits as required </li>
+                            </ul>
+                            <h5>To qualify, you must meet some/all of the below requirements:</h5>
+                            <ul class="m-0">
+                                <li>Previous CRM Admin experience is a MUST!.</li>
+                                <li>Previous experience working with Velocify is a plus.</li>
+                                <li>Back-end/infrastructure knowledge is a plus.</li>
+                                <li>Previous experience setting up integration with lead providers is a plus.</li>
+                                <li>Knowledge of lead distribution is a plus.</li>
+                                <li>Previous experience setting up campaigns and nurturing campaigns is a plus.</li>
+                                <li>Positive, ‘can-do’ attitude!.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            This is a full-time (Monday through Friday from 9:00am – 6:00pm) position that is fully remote! Here at HYPOTEC, we believe that a work-life
+                            balance is integral to a team member’s well-being! Weekends are not required! If you are ready to take your career to the next level, search
+                            no longer! Send in your resume today and we will be in contact shortly!
+                        </p>
+                        <div class="cdContent">
+                            <h5>Why work for Hypotec?</h5>
+                            <ul class="m-0">
+                                <li>We’ve been in the Mortgage Industry since 2004</li>
+                                <li>We are a fully remote company </li>
+                                <li>Advanced & in-depth training programs </li>
+                                <li>We offer medical benefits after 90 days of employment</li>
+                                <li>We are invested in your career growth; plenty of room for career advancement within the company </li>
+                                <li>We genuinely care about our employees! Check out our reviews on Glassdoor!</li>
+                            </ul>
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#staticBackdrop" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (ViewBag.PostId == "1")
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="all-caption comm-text">
+                        <h2>Hypotec is looking for <span class="blue-text">Loan Officers!</span></h2>
+                        <p>
+                            Hypotec has been and currently is an established leader in the Mortgage Industry for the past 15+ consecutive years! With licensing in 8+
+                            different states (and growing!), we have solidified our position in serving communities on a national level, for their mortgage needs.
+                        </p>
+                        <p>
+                            We are currently looking for Loan Officers that we can fully-train and provide warm leads to! Are you a newly licensed Loan Officer who needs
+                            training and support as you get started in your career? Look no further! Here at Hypotec, we specialize in recruiting newly licensed Loan
+                            Officers and developing them into their careers from day one with us. Not only do we provide the necessary training, but we also PROVIDE WARM
+                            LEADS to ensure your success in your new career! No cold calling will ever be required of you!
+                        </p>
+                        <p>
+                            Our training program is fully-paid, extremely hands-on, completely remote, and approximately 4-8 weeks long. Not only will it ensure your
+                            success with us here at Hypotec, but it is designed to aide you in all your future success in the Mortgage Industry!
+                        </p>
+                        <div class="cdContent">
+                            <h5>To qualify, you must meet the below requirements: </h5>
+                            <ul class="m-0">
+                                <li>MLO Licensing is a must!</li>
+                                <li>Strong sales and communication skills </li>
+                                <li>Proven track of a successful sales record</li>
+                                <li>Ability to provide outstanding customer service </li>
+                                <li>Positive ‘can-do’ attitude!</li>
+                            </ul>
+                        </div>
+                        <p>
+                            This is a full-time (Monday through Friday from 9:30am – 6:30pm) position that is fully remote! Here at Hypotec, we believe that a
+                            work-life balance is integral to a team member’s well-being! Weekends are not required! If you are ready to take your career to the next
+                            level, search no longer! Send in your resume today and we will be in contact shortly!
+                        </p>
+                        <div class="cdContent">
+                            <h5>Why work for Hypotec? </h5>
+                            <ul class="m-0">
+                                <li>We’ve been in the Mortgage Industry since 2004</li>
+                                <li>We are a fully remote company</li>
+                                <li>We offer medical benefits after 90 days of employment</li>
+                                <li>We offer an advanced, hands-on & in-depth training program that is done via Zoom</li>
+                                <li>We build our Loan Officers book of business for them! We provide warm/extremely hot leads!</li>
+                                <li>We pay half of the costs for our Loan Officers to get licensed in additional states we’re licensed in </li>
+                                <li>We are invested in your career growth; plenty of room for career advancement within the company </li>
+                                <li>We genuinely care about our employees! Check out our reviews on Glassdoor!</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#staticBackdrop" class="btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (ViewBag.PostId == "2")
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="all-caption comm-text">
+                        <h2>Hypotec is looking for Remote <span class="blue-text">Loan Processors!</span></h2>
+                        <p>
+                            Hypotec has been and currently is an established leader in the Mortgage Industry for the past 15+ consecutive years! With licensing
+                            in 8+ different states (and growing!), we have solidified our position in serving communities on a national level, for their mortgage needs.
+                        </p>
+                        <p>
+                            We are currently looking for Loan Processors to join our growing team of professionals!
+                        </p>
+
+                        <div class="cdContent">
+                            <h5>To qualify, you must meet some/all of the below requirements:</h5>
+                            <ul class="m-0">
+                                <li>Previous experience as a Mortgage Loan Processor is a MUST</li>
+                                <li>Previous experience using Encompass or Calyx is a MUST</li>
+                                <li>Previous experience working for multiple lenders is a MUST</li>
+                                <li>Working a file from start to finish is a MUST</li>
+                                <li>Previous experience running DU/LP is a plus</li>
+                                <li>Manage client pipeline efficiently</li>
+                                <li>Submitting completed loan files to underwriter</li>
+                                <li>Working loan approvals</li>
+                                <li>Willing to work in a team environment and coach junior members of the team</li>
+                                <li>The ability to work under pressure and meet deadlines</li>
+                                <li>Positive, ‘can-do’ attitude!</li>
+                            </ul>
+
+                        </div>
+                        <p>
+                            As a Loan Processor with Hypotec, you will receive the necessary supervision and mentorship to succeed beyond your role, all while managing our residential real estate loan documents to provide a uniquely tailored experience. You will have a full, hands-on, paid training program that is tailored to fit not only our needs but will aide you in all your future success in the Mortgage Industry!
+                        </p>
+                        <p>
+                            This is a full-time (Monday through Friday from 9:00am – 6:00pm) position that is fully remote! Here at HYPOTEC, we believe that a work-life balance is integral to a team member’s well-being! Weekends are not required! If you are ready to take your career to the next level, search no longer! Send in your resume today and we will be in contact shortly!
+                        </p>
+
+                        <div class="cdContent">
+                            <h5> Why work for Hypotec?</h5>
+                            <ul class="m-0">
+                                <li>We’ve been in the Mortgage Industry since 2004</li>
+                                <li>We are a fully remote company</li>
+                                <li>We have advanced & in-depth training programs</li>
+
+                                <li>
+                                    We offer medical benefits after 90 days of employment
+                                </li>
+                                <li>    Employee referral program</li>
+                                <li>We are invested in your career growth; plenty of room for career advancement within the company</li>
+                                <li>
+                                    We genuinely care about our employees! Check out our reviews on Glassdoor!
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#staticBackdrop" class="btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (ViewBag.PostId == "3")
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="all-caption comm-text">
+                        <h2>Hypotec is looking for a Remote <span class="blue-text">Social Media Specialist!</span></h2>
+                        <p>
+                            Hypotec has been and currently is an established leader in the Mortgage Industry for the past 15+ consecutive years! With licensing in 8+
+                            different states (and growing!), we have solidified our position in serving communities on a national level, for their mortgage needs.
+                        </p>
+                        <p>
+                            We are currently looking for a Social Media Specialist to join our growing team of professionals!
+                        </p>
+                        <div class="cdContent">
+                            <h5>Some of the responsibilities in this position will include and are not limited to:</h5>
+                            <ul class="m-0">
+                                <li>Planning and executing digital marketing campaigns across all social media platforms</li>
+                                <li>Maintain our social media presence across all digital channels</li>
+                                <li>Measuring and reporting on the performance of all digital marketing campaigns </li>
+                                <li>Design, build and maintain our social media presence; basic graphic design skills are required</li>
+                                <li>Measure and report performance of all digital marketing campaigns, and assess against goals</li>
+                                <li>Planning and execution of online engagement strategies </li>
+                                <li>Identify trends and insights, and optimize spend and performance based on the insights</li>
+                                <li>Brainstorm new and creative growth strategies</li>
+                                <li>Collaborate with internal teams to create landing pages and optimize user experience</li>
+                                <li>Utilize strong analytical ability to evaluate end-to-end customer experience across multiple channels and customer touch points</li>
+                                <li>Evaluate emerging technologies and provide thought leadership and perspective for adoption where appropriate</li>
+                                <li>Able to prioritize and coordinate multiple projects and competing work demands; ability to see the “big picture” while managing several small projects</li>
+                            </ul>
+                        </div>
+                        <p>
+                            This is a full-time (Monday through Friday from 9:30am – 6:30pm) position that is fully remote! Here at Hypotec, we believe that a
+                            work-life balance is integral to a team member’s well-being! Weekends are not required! If you are ready to take your career to the next
+                            level, search no longer! Send in your resume today and we will be in contact shortly!
+                        </p>
+                        <div class="cdContent">
+                            <h5>Why work for Hypotec? </h5>
+                            <ul class="m-0">
+                                <li>We’ve been in the Mortgage Industry since 2004</li>
+                                <li>We are a fully remote company</li>
+                                <li>We offer medical benefits after 90 days of employment</li>
+                                <li>We offer an advanced, hands-on & in-depth training program that is done via Zoom</li>
+                                <li>We build our Loan Officers book of business for them! We provide warm/extremely hot leads!</li>
+                                <li>We pay half of the costs for our Loan Officers to get licensed in additional states we’re licensed in </li>
+                                <li>We are invested in your career growth; plenty of room for career advancement within the company </li>
+                                <li>We genuinely care about our employees! Check out our reviews on Glassdoor!</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#staticBackdrop" class="btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (ViewBag.PostId == "4")
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="all-caption comm-text">
+                        <h2>Hypotec is looking for Remote <span class="blue-text">Mortgage Loan Underwriters!</span></h2>
+                        <p>
+                            <b>Hypotec</b> has been and currently is an established leader in the Mortgage Industry for the past 15+ consecutive years! With licensing in 8+ different states (and growing!), we have solidified our position in serving communities on a national level, for their mortgage needs.
+                        </p>
+                        <p>
+                            We are currently looking for Underwriters to join our growing team of professionals!
+                        </p>
+                        <div class="cdContent">
+                            <h5>Some of your responsibilities will include: </h5>
+                            <ul class="m-0">
+                                <li>Authorizing and underwriting loans</li>
+                                <li>Reviewing and verifying loan applications and supporting documentation</li>
+                                <li>Analyzing loan risk and requesting additional information as necessary</li>
+                                <li>Preparing reports on assessment findings</li>
+                                <li>Making loan eligibility decisions and approving or rejecting applications</li>
+                                <li>Reviewing and specifying loan conditions as necessary</li>
+                                <li>Ensuring compliance with regulatory standards</li>
+                                <li>Ensuring compliance with company policies and guidelines</li>
+                                <li>Documenting and effectively communicating reasons for the approval/rejection of loans</li>
+                                <li>Returning applications with additional documentation to the loan officer for review</li>
+                            </ul>
+                        </div>
+                        <div class="cdContent">
+                            <h5>To qualify, you must meet some/all of the below requirements:</h5>
+                            <ul class="m-0">
+                                <li>Previous experience as a Mortgage Loan Underwriter is a MUST</li>
+                                <li>Previous experience using Encompass or Calyx</li>
+                                <li>Previous experience working for multiple lenders</li>
+                                <li>Previous experience working a file from start to finish</li>
+                                <li>Previous experience running DU/LP</li>
+                                <li>Willing to work in a team environment and coach junior members of the team</li>
+                                <li>The ability to work under pressure and meet deadlines</li>
+                                <li>Positive, ‘can-do’ attitude!</li>
+                            </ul>
+                        </div>
+                        <p>
+                            This is a full-time (Monday through Friday from 9:00am – 6:00pm) position that is fully remote! Here at HYPOTEC, we believe that a work-life balance is integral to a team member’s well-being! Weekends are not required! If you are ready to take your career to the next level, search no longer! Send in your resume today and we will be in contact shortly!
+                        </p>
+                        <div class="cdContent">
+                            <h5>Why work for Hypotec? </h5>
+                            <ul class="m-0">
+                               <li>We’ve been in the Mortgage Industry since 2004</li>
+                               <li>We are a fully remote company</li>
+                               <li>We have advanced & in-depth training programs</li>
+                               <li>We offer medical benefits after 90 days of employment</li>
+                               <li>Employee referral program</li>
+                               <li>We are invested in your career growth; plenty of room for career advancement within the company</li>
+                               <li>We genuinely care about our employees! Check out our reviews on Glassdoor!</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#staticBackdrop" class="btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- end contact us page HTML code -->
+<!-- career apply modal HTML -->
+<div class="applyModal">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block text-center">
+                    <h5 class="modal-title" id="staticBackdropLabel">Application Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" id="savingform" method="post" enctype="multipart/form-data" asp-action="CareerDetails" asp-controller="Aboutus">
+                        <div class="col-md-6 col-12 col-md-lx-6 col-xl-6">
+
+                            <input type="hidden" asp-for="PostId" id="PostId" value="@ViewBag.PostId" class="form-control" />
+
+                            <div class="form-group">
+                                <label for="">First Name</label>
+                                <input asp-for="FirstName" maxlength="50" id="firstName" class="form-control" />
+                                <span asp-validation-for="FirstName" id="errorfirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 col-md-lx-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="">Last Name</label>
+                                <input asp-for="LastName" maxlength="50" id="lastName" class="form-control" />
+                                <span asp-validation-for="LastName" id="errorlastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 col-md-lx-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="">Primary Phone</label>
+                                <input asp-for="PrimaryPhone" id="primaryPhone" class="form-control" />
+                                <span asp-validation-for="PrimaryPhone" id="errorprimaryPhone" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 col-md-lx-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input asp-for="Email" maxlength="50" id="email" class="form-control" />
+                                <span asp-validation-for="Email" id="erroremail" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="resumeArea">
+
+                                <label asp-for="Attachment" class="control-label"></label>
+                                <div class="custom-file">
+                                    <input asp-for="Attachment" class="custom-file-input" id="Attachment">
+                                    <label class="custom-file-label" for="Attachment">Choose file</label>
+                                </div>
+                                <span asp-validation-for="Attachment" id="errorcustomFile" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 subpadding">
+                            <div class="register-form-btn">
+                                <button type="submit" class="btn" onclick="javascript:return validateDetails();">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- career apply modal HTML -->
+<script>$("#savingform")[0].reset();</script>

@@ -1,0 +1,276 @@
+﻿@model Hypotec.Web.Models.UserModel
+
+@{
+    ViewData["Title"] = "AddUser";
+}
+<section class="register-page">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-heading">
+                    <h2>Create Your Account <span class="blue-text"> Here </span></h2>
+                </div>
+                <div class="form-area">
+                    <h4>Your information is always private.</h4>
+                    <form class="row" id="savingform" method="post" asp-action="AddUser" asp-controller="Account">
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label class="control-label">First Name</label>
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label class="control-label">Last Name</label>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label for="">Primary Phone</label>
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label for="">Confirm Email</label>
+                                <input asp-for="ConfirmEmail" class="form-control" />
+                                <span asp-validation-for="ConfirmEmail" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <div class="input-group">
+                                    <input asp-for="PasswordHash" type="password" id="PasswordHash" class="form-control border-right-0" />
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-left-0 bg-transparent"><i toggle="PasswordHash" class="fas fa-eye-slash eyeShowHide"></i></div> @*<i toggle="PasswordHash" class="k-icon k-i-lock toggle-password"></i>*@
+                                    </div>
+                                    <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="form-group">
+                                <label for="">How did you hear about us?</label>
+                                <textarea asp-for="HowDidYouAboutUs" class="form-control" text-wrap:normal" type="text" placeholder="Please add your experience here"></textarea>
+                                <span asp-validation-for="HowDidYouAboutUs" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="form-group">
+                                <label for="">Property State Applying For</label>
+                                <select name="PropertyState" id="PropertyState" class="form-control">
+                                    <option value="" selected>State</option>
+                                    <option value="CA">CA</option>
+                                    <option value="CL">CL</option>
+                                    <option value="FL">FL</option>
+                                    <option value="GA">GA</option>
+                                    <option value="MD">MD</option>
+                                    <option value="NC">NC</option>
+                                    <option value="NJ">NJ</option>
+                                    <option value="NY">NY</option>
+                                    <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
+                                </select>
+                                <span asp-validation-for="PropertyState" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="form-group check-c-box form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">I agree to the <span class="blue-text" data-toggle="modal" data-target="#exampleModal">terms of use & privacy policy.</span></label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="register-form-btn">
+                                <div class="d-flex justify-content-end">
+                                    <a href="javascript:void(0);" class="">Already Have an Account?</a>
+                                    <button type="submit" class="btn" onclick="javascript:return AcceptTermAndcondition();">Create Your Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="exampleModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Terms of Use & Privacy Policy</h5>
+                <button type="button" id="btnClose" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>The following Terms of Use and Privacy Policy are effective February 1, 2016 and remain in effect until amended. Hypotec Inc. reserves the right to amend the Terms of Use and Privacy Policy and/or alter its content at its sole discretion without notice to you. Any alterations to the Terms of Use and Privacy Policy will be posted on our web site immediately.</p>
+                <h4>Terms of Use</h4>
+                <p>By using this website (mobile, web or otherwise), you agree to be bound by the following terms of use:</p>
+                <ol class="tou-pp">
+                    <li>Hypotec Inc. is a licensed mortgage Correspondent. Hypotec Inc. collects an application, offers and negotiates mortgage loans.</li>
+                    <li>Hypotec Inc. is an administrative platform providing consumers the tools to easily search, apply and close a loan entirely online.</li>
+                    <li>You apply directly with Hypotec Inc.. Hypotec Inc. controls the rates displayed, service providers and Hypotec Inc. is the entity making a credit decision.</li>
+                    <li>You agree not to remove or modify any copyright or other intellectual property that appears in the Hypotec Inc. website. You will not use the functions and tools available within the website for resale.</li>
+                    <li>You agree not to use the services Hypotec Inc. provides in any way that is unlawful, or harms Hypotec Inc., its service providers, suppliers or any other user. You agree not to distribute or post spam, chain letters, pyramid schemes, or similar communications through the Services. You agree not to impersonate another person or misrepresent your affiliation with another person or entity.</li>
+                    <li>These Terms of Use do not provide you a license to use, reproduce, distribute, display or provide access to any portion of the website on third-party Web sites. You agree that you will not, nor will you permit or encourage any third party to, reproduce, publicly display, or otherwise make accessible on or through any other Web site, application, or service any reviews, ratings, and/or profile information.</li>
+                    <li>Automated queries (including screen and database scraping, spiders, robots, crawlers and any other automated activity with the purpose of obtaining information from the website) are strictly prohibited on the website, unless you have received express written permission from Hypotec Inc..</li>
+                    <li>As a limited exception, publicly available search engines and similar Internet navigation tools ("Search Engines") may query the services Hypotec Inc. provides and provide an index with links to the website pages, only to the extent such unlicensed "fair use" is allowed by applicable copyright law. Search Engines are not permitted to query or search information protected by a security verification system ("captcha") which limits access to human users.</li>
+                    <li>You acknowledge that, by submitting your contact information or other request form on the website or by electing to request pre-approval or approval, you may receive calls from or on behalf of the lender at the telephone number(s) you provide to assist you in the mortgage process.</li>
+                    <li>You agree to defend and hold Hypotec Inc., its affiliates, and their respective directors, officers, employees, and agents harmless from any and all claims and demands made by any third party due to or arising out of your breach of these Terms of Use, your use of the website and it's offerings, your violation of any law or the rights of a third party, or any submission of information and documents made through your user account on the website or that you otherwise make available through the website and its offerings.</li>
+                    <li>You release Hypotec Inc., its affiliates, and their respective directors, officers, employees and agents from all liability related to any and all claims and demands you may assert against any third party arising out of the website and it's offering. If you are a California resident, you waive California Civil Code Section 1542, which states, "A general release does not extend to claims which the creditor does not know or suspect to exist in his or her favor at the time of executing the release, which if known by him or her must have materially affected his or her settlement with the debtor."</li>
+                </ol>
+                <h4>Privacy Policy</h4>
+                <ol class="tou-pp">
+                    <li>Hypotec Inc. takes online privacy seriously. This statement is one way of maintaining your trust in our company, our products, and our services. Our privacy policy describes how we collect, protect, and use information about you during your visit to our web site.</li>
+                    <li>Hypotec Inc. holds data confidentially and securely, adhering to standard privacy policies banks and lenders adhere to, including, but not limited to 128 bit encryption technology provided by DigiCert.</li>
+                    <li>Personal information about you is collected from the information you provide to us when you sign up, fill out an application or any other form on our site required for your chosen lender to offer, process, approve and complete your mortgage transaction.</li>
+                    <li>If you sign up, fill out an application or other form on our site, you will be asked for a variety of information which will help lenders communicate with you, and help the lenders you choose to evaluate your need(s) and to determine eligibility for the products or services that may be right for you.</li>
+                    <li>We collect personal information about you when you sign up, fill out an application with your chosen lender or other form on our site.</li>
+                    <li>We use cookies, but only to maintain session status as you complete forms. We do not and will not use cookies to collect or gather information as to your activities on our website or other sites you may have visited.</li>
+                    <li>We will only share your information insomuch as it is required to help your chosen lender process your application and/or form.</li>
+                    <li>We restrict access to the information obtained from our web site and web pages to our employees and only those lenders and parties needed to process your information. We log all activity on the website and we periodically review that activity to determine the use of the site and will report malicious and or inappropriate activity to the appropriate law enforcement authorities. We maintain physical, electronic, and procedural safeguards designed to protect your personal information at all times.</li>
+                    <li>Hypotec Inc. will never sell or make your personal identifiable information public.</li>
+                </ol>
+                <h4>Contact Hypotec Inc.</h4>
+                <p>Hypotec Inc.<br>10055 Yamato Road Suite 305<br>Boca Raton, FL 33428<br>NMLS# 331734<br><br>Email: info@hypotec.com<br>Phone: 844-497-6832</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default center-block spacer-top" data-dismiss="modal" role="button" aria-label="Close">Close</button>
+                    <button id="pdfDownload" class="btn-link spacer-top">Download as PDF</button>
+                    @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".eyeShowHide").click(function () {
+
+            $(this).toggleClass("fas fa-eye");
+            var input = $("[id='" + $(this).attr("toggle") + "']");
+
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+        if ('@ViewBag.Message' == "User not register.") {
+            alert('@ViewBag.Message');
+        toastr.error('User not register.', 'Failed!')
+        return false;
+    }
+    if ('@ViewBag.Message' == "User register successfully.") {
+        toastr.success('User register successfully.', 'Success!')
+        return false;
+    }
+    });
+</script>
+<script language="javascript" type="text/javascript">
+    function AcceptTermAndcondition() {
+
+        if ($("#exampleCheck1").is(':checked')) {
+            return true;
+        }
+        else {
+            toastr.error('Please accept term and condition.', 'Inconceivable!')
+            //alert("Please accept term and condition");
+            return false;
+        }
+    }
+</script>
+<script language="javascript" type="text/javascript">
+    function demoFromHTML() {
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        // source can be HTML-formatted string, or a reference
+        // to an actual DOM element from which the text will be scraped.
+        source = $('#exampleModal')[0];
+
+        // we support special element handlers. Register them with jQuery-style
+        // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+        // There is no support for any other type of selectors
+        // (class, of compound) at this time.
+        specialElementHandlers = {
+            // element with id of "bypass" - jQuery style selector
+            '#bypassme': function (element, renderer) {
+                // true = "handled elsewhere, bypass text extraction"
+                return true
+            }
+        };
+        margins = {
+            top: 80,
+            bottom: 60,
+            left: 10,
+            width: 700
+        };
+        // all coords and widths are in jsPDF instance's declared units
+        // 'inches' in this case
+        pdf.fromHTML(
+            source, // HTML string or DOM elem ref.
+            margins.left, // x coord
+            margins.top, { // y coord
+            'width': margins.width, // max width of content on PDF
+            'elementHandlers': specialElementHandlers
+        },
+
+            function (dispose) {
+                // dispose: object with X, Y of the last line add to the PDF
+                //          this allow the insertion of new lines after html
+                pdf.save('Test.pdf');
+            }, margins);
+    }
+
+</script>
+
+@*auto fill address using api key*@
+@*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyD8osk1FwBsus40t3ZCHj62tjrSKPIFv2A"></script>
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function () {
+            debugger;
+            var places = new google.maps.places.Autocomplete(document.getElementById('HowDidYouAboutUs'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+                var place = places.getPlace();
+                var address = place.formatted_address;
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+                var latlng = new google.maps.LatLng(latitude, longitude);
+                var geocoder = geocoder = new google.maps.Geocoder();
+                geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (results[0]) {
+                            debugger;
+                            var address = results[0].formatted_address;
+                            var pin = results[0].address_components[results[0].address_components.length - 1].long_name;
+                            var country = results[0].address_components[results[0].address_components.length - 2].long_name;
+                            var state = results[0].address_components[results[0].address_components.length - 3].long_name;
+                            var city = results[0].address_components[results[0].address_components.length - 4].long_name;
+                            document.getElementById('txtCountry').value = country;
+                            document.getElementById('txtState').value = state;
+                            document.getElementById('txtCity').value = city;
+                            document.getElementById('txtZip').value = pin;
+                        }
+                    }
+                });
+            });
+        });
+    </script>*@

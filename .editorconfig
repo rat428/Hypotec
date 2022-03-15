@@ -1,0 +1,46 @@
+﻿[*.cs]
+
+# CA1024: Use properties where appropriate
+dotnet_diagnostic.CA1024.severity = warning
+
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = none
+
+# CA1051: Do not declare visible instance fields
+dotnet_diagnostic.CA1051.severity = none
+
+# CA1068: CancellationToken parameters must come last
+dotnet_diagnostic.CA1068.severity = none
+
+# CA1062: Validate arguments of public methods
+dotnet_diagnostic.CA1062.severity = none
+
+# CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = none
+
+# CA1052: Static holder types should be Static or NotInheritable
+dotnet_diagnostic.CA1052.severity = none
+
+# CA1031: Do not catch general exception types
+dotnet_diagnostic.CA1031.severity = none
+
+# CA1041: Provide ObsoleteAttribute message
+dotnet_diagnostic.CA1041.severity = none
+
+# CA1822: Mark members as static
+dotnet_diagnostic.CA1822.severity = none
+
+# CA9998: Mark migrate as static
+dotnet_diagnostic.CA9998.severity = none
+
+# CA5369: Use XmlReader for 'XmlSerializer.Deserialize()'
+dotnet_diagnostic.CA5369.severity = none
+
+# CA1002: Do not expose generic lists
+dotnet_diagnostic.CA1002.severity = silent
+
+# CA1056: URI-like properties should not be strings
+dotnet_diagnostic.CA1056.severity = none
+
+# CA1508: Avoid dead conditional code
+dotnet_diagnostic.CA1508.severity = none

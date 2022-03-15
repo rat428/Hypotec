@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceList>
+  <Resource>
+    <Id>1</Id>
+    <Tag>Homebuying</Tag>
+    <Header>All You Need to Know About Buyer’s Closing Costs</Header>
+    <Description>
+			Th  home buying experience can be exciting.  You’re ready to settle down or upgrade to more space for your family.
+			But with all the action surrounding getting pre-approved, finding a reputable Real Estate Agent and vising open
+			houses, there’s one thing that can’t be forgotten during the excitement – your closing costs.
+		</Description>
+    <ImagePath>/images/Resource/Refinance.jpg</ImagePath>
+    <Status>true</Status>
+  </Resource>
+  <Resource>
+    <Id>2</Id>
+    <Tag>Homebuying</Tag>
+    <Header>Avoid These Common Mistakes When Selling Your Home</Header>
+    <Description>
+			It’s time consuming, it can be emotional, it’s overwhelming – let’s face it, it’s A LOT when you’re looking to
+			put your home on the market.  First time home sellers may find the process frustrating and it’s very common for
+			mistakes to be made during the process.  Check out the biggest mistakes to avoid when looking to sell your home.
+		</Description>
+    <ImagePath>/images/Resource/2.jpg</ImagePath>
+    <Status>true</Status>
+  </Resource>
+  <Resource>
+    <Id>3</Id>
+    <Tag>Homebuying</Tag>
+    <Header>Navigating Today’s Hot Real Estate Market – How To Land A Deal</Header>
+    <Description>
+			Supply is low which is pushing home prices higher and higher.  In this hot market, it can be hard for buyer’s
+			to land a deal.  We break it down to four simple steps below on how to navigate the market and come out on top
+			when searching for your next home.
+		</Description>
+    <ImagePath>/images/Resource/3.jpg</ImagePath>
+    <Status>true</Status>
+  </Resource>
+  <Resource>
+    <Id>4</Id>
+    <Tag>Homebuying</Tag>
+    <Header>Why Should I Get Pre-Approved For A Mortgage?</Header>
+    <Description>
+			You’re moving across the country – how exciting!  Before you start loading up your moving truck, you want to
+			find a place to live.  Just landed your dream job – so many feelings and emotions.  Let’s get the contract
+			signed before you start decorating your office.  The same mindset comes into play when you’re looking to
+			purchase a new home.  Your first step to ensure everything goes smoothly?  Get pre-approved.  Serious
+			homebuyers should start the process by obtaining their pre-approval letter, not by visiting an abundance
+			of open houses.
+		</Description>
+    <ImagePath>/images/Resource/4.jpg</ImagePath>
+    <Status>true</Status>
+  </Resource>
+  <Resource>
+    <Id>5</Id>
+    <Tag>Homebuying</Tag>
+    <Header>Reasons Why You Should Refinance Your Mortgage</Header>
+    <Description>
+			Unless you’re living under a rock, we’re sure you’ve heard the news that interest rates are at ALL TIME LOWS.
+			But what does this mean?  If you are finding it difficult to service your mortgage, or wish to benefit from
+			lower interest rates, you can opt for refinancing. Many private and government-controlled home refinancing
+			programs are available to the general public. As long as you meet their criteria, you can refinance your
+			mortgage.
+		</Description>
+    <ImagePath>/images/Resource/resource.jpg</ImagePath>
+    <Status>true</Status>
+  </Resource>
+  <Resource>
+    <Id>6</Id>
+    <Tag>Homebuying</Tag>
+    <Header>&lt;b&gt;Sample&lt;/b&gt;</Header>
+    <Description>&lt;u&gt;this is sample&lt;/u&gt;</Description>
+    <ImagePath>/images/Resource/2.jpg</ImagePath>
+    <Status>true</Status>
+  </Resource>
+  <Resource>
+    <Id>7</Id>
+    <Tag>Refinancing</Tag>
+    <Header>&lt;p&gt;Test For Save Data&lt;/p&gt;</Header>
+    <Description>&lt;p&gt;Test For save data of description&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/about-c.png</ImagePath>
+    <Status>false</Status>
+  </Resource>
+  <Resource>
+    <Id>8</Id>
+    <Tag>Refinancing</Tag>
+    <Header>&lt;p&gt;&lt;font color="#0000ff"&gt;This is&lt;/font&gt; &lt;b&gt;Resource Page&lt;/b&gt;&lt;/p&gt;</Header>
+    <Description>&lt;p&gt;This is the sample resource page for display under resource section of the application.&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/3.jpg</ImagePath>
+    <Status>false</Status>
+  </Resource>
+  <Resource>
+    <Id>9</Id>
+    <Tag>Homebuying</Tag>
+    <Header>&lt;p&gt;&lt;b&gt;&lt;u&gt;Sample Article 4&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;</Header>
+    <Description>&lt;p&gt;Test or description sample&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/Refinance.jpg</ImagePath>
+    <Status>false</Status>
+  </Resource>
+  <Resource>
+    <Id>10</Id>
+    <Tag>News &amp; Insight</Tag>
+    <Header>&lt;p&gt;test svdf ds&amp;nbsp;&amp;nbsp;&lt;/p&gt;</Header>
+    <Description>&lt;p&gt;&lt;b&gt;ffdsadfsdfs c ds s&amp;nbsp;&lt;/b&gt;&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/2.jpg</ImagePath>
+    <Status>false</Status>
+  </Resource>
+  <Resource>
+    <Id>11</Id>
+    <Tag>Homebuying</Tag>
+    <Header>&lt;p&gt;fsdfdfc cvbcvx&lt;/p&gt;&amp;nbsp;</Header>
+    <Description>&lt;p&gt;xcvxdfxcvxcvx&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/2.jpg</ImagePath>
+    <Status>false</Status>
+  </Resource>
+  <Resource>
+    <Id>12</Id>
+    <Tag>Refinancing</Tag>
+    <Header>&lt;p&gt;sample 1 article&lt;/p&gt;</Header>
+    <Description>&lt;p&gt;sample description&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/Refinance.jpg</ImagePath>
+    <Status>false</Status>
+  </Resource>
+  <Resource>
+    <Id>13</Id>
+    <Tag>Homebuying</Tag>
+    <Header>&lt;p&gt;Test Hypotec Resource&lt;/p&gt;</Header>
+    <Description>&lt;p&gt;Test for &lt;b&gt;add resourec&lt;/b&gt;&lt;/p&gt;</Description>
+    <ImagePath>/images/Resource/Jane.jpg</ImagePath>
+    <Status>false</Status>
+  </Resource>
+</ResourceList>

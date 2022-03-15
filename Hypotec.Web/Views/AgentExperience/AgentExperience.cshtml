@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewData["Title"] = "AgentExperience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start contact us page HTML code -->
+<section class="agentExperience">
+    @if (ViewBag.Message != null && ViewBag.Message == true)
+    {
+    <div class="alert alert-success  alert-dismissible fade show">
+        <strong>Success!</strong> Agent experience applied successfully .
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    }
+    @if (ViewBag.Message == false)
+    {
+    <div class="alert alert-danger  alert-dismissible fade show">
+        <strong>Failed!</strong> failed .
+        <button type="button" class="close" data-dismiss="alert"></button>
+    </div>
+    }
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption termofuseText">
+                    <h2 class="">Agent <span class="blue-text">Experience</span></h2>
+                    <p>
+                        We’re here to help!  Hypotec values all of our Real Estate Agent partners and want to assist your clients in the home buying
+                        experience as seamlessly as we can.  By signing up to partner with our team of experienced loan advisors, you’ll have access
+                        to REAL TIME rates and monthly estimates to help your clients navigate the loan process during the home buying experience.
+                    </p>
+                </div>
+                <div class="twoButton my-5">
+                    <div class="">
+                        <a href="javascript:void(0);" class="btn" data-toggle="modal" data-target="#agetget">Become a Preferred Partner Today</a>
+                    </div>
+                </div>
+                <div class="mcContent p-0">
+                    <h5>Why Partner With Hypotec?</h5>
+                    <p>
+                        The real question should be, why not?!  Hypotec offers the ability to highlight trusted local Real Estate Agent’s in our
+                        areas of operation at no cost to the agent.  Many potential clients on the search for their dream home start with getting
+                        pre-approved.  It is very common that they have not established a relationship with a Real Estate Agent yet.  We strive to
+                        provide the best service to all of our clients and appreciate being able to recommend top local agents to assist our clients
+                        in their home search.
+                    </p>
+
+                    <h5>Let’s Talk About The Benefits</h5>
+                    <p>
+                        LBy submitting a partner form through Hypotec, not only will you be forwarded top leads that we pre-approve, you will be
+                        featured directly on our website for prospects to reach out to you directly.
+                    </p>
+                    <p>
+                        We also offer members only access to our exclusive personalized Mortgage Calculator which will easily allow you to enter
+                        information and show a client the finances on a particular home.  Our Agent Experience was created to empower Real Estate
+                        Agents to take more control over their clients’ home buying process and access numerous resources at the click of a button.
+                    </p>
+                    <p>
+                        Ready to partner with Hypotec today?  Fill out our short application form and you’ll be well on your way to receiving
+                        exclusive tools and information to help skyrocket your clients’ experience!
+                    </p>
+                </div>
+                <div class="twoButton">
+                    <div class="">
+                        <a href="javascript:void(0);" class="btn" data-toggle="modal" data-target="#agetget">Get Started Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="applyModal reqclbk">
+    <div class="modal fade" id="agetget" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="agetgetLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header diffheading d-block text-center">
+                    <h5 class="modal-title" id="agetgetLabel">
+                        @*Get Access To Real Time Rates Today*@
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <label id="lblSlot"> </label>
+
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" id="name" class="form-control" />
+                                <span style="color:red" id="errorName"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Phone</label>
+                                <input type="text" id="phone" class="form-control" />
+                                <span style="color:red" id="errorPhone"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" id="email" class="form-control" />
+                                <span style="color:red" id="errorEmail"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Areas Covered </label>
+                                <input type="text" id="areasCovered" class="form-control" />
+                                <span style="color:red" id="errorAreasCovered"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Tell Us About Your self</label>
+
+                                <input type="text" id="tellUs" class="form-control" />
+                                <span style="color:red" id="errorTellUs"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-0">
+                            <div class="register-form-btn">
+
+                                <input type="button" onclick="SendMailAgengtEx1233();" class="btn w-100" value="Send Message" />
+                                @*<button type="submit" onclick="SendMailtest();" class="btn w-100">Send Message</button>*@
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=""></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end contact us page HTML code -->
+@*<script src="~/js/Custom/AgentExperience.js"></script>*@

@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewData["Title"] = "Purchase";
+}
+<style>
+    a.disabled {
+        color: gray;
+    }
+</style>
+<section class="purchasePage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="twoButton">
+                    <div class="pb-4">
+                        <a href='@Url.Action("Purchase", "LoanRate")' class="btn mr-2 mr-xl-4">Purchase</a>
+                        <a href='@Url.Action("Refinance", "LoanRate")' class="btn btn-border">Refinance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="calculatorForm">
+                    <h4>Purchase Rate Detail</h4>
+                    <div class="formBase">
+                        <form class="row" action="#">
+                            <input id="loanpurpose" name="loanpurpose" type="hidden" value="0" />
+                            <input id="homeValue" name="homeValue" type="hidden" value="0" />
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 zipCode">
+                                <label for="">Zip Code</label>
+                                <input type="text" class="form-control" name="" id="PurZipCode" placeholder="Zip Code" />
+
+                                <span style="color:red" id="errorPurZipCode"></span>
+
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 cScore">
+                                <label for="">Credit Score Range</label>
+                                <select id="PurCreditScore" class="form-control">
+                                    <option selected>Select credit Score</option>
+                                    <option value="760">Excellent (≥ 760)</option>
+                                    <option value="740">Very good (740-759)</option>
+                                    <option value="720">Good (720-739)</option>
+                                    <option value="700">Decent (700-719)</option>
+                                    <option value="680">Average (680-699)</option>
+                                    <option value="660">Fair (660-679)</option>
+                                    <option value="620">Low (620-659)</option>
+                                    <option value="580">Very Low (580-619)</option>
+                                    <option value="400">Poor (< 580)</option>
+                                </select>
+                                <span style="color:red" id="errorPurCreditScore"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 pPrice">
+                                <label for="">Purchase Price</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+
+                                    <input type="text" class="form-control border-left-0" value="" placeholder="Amount" id="purchasePrice" />
+                                </div>
+                                <span style="color:red" id="errorpurchasePrice"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 dPayment">
+                                <label for="">Down Payment</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Amount" id="down" />
+                                    <input type="text" class="form-control border-right-0 p-0 text-center" placeholder="" id="percentage" />
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-left-0 pl-0 bg-transparent rounded-right"><i class="fa fa-percent"></i></div>
+                                    </div>
+
+                                </div>
+                                <span style="color:red" id="errordownPayment"></span>
+                                <span style="color:red" id="errorpercentage"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 pType">
+                                <label for="">Property Type</label>
+                                <select id="propertyType" class="form-control">
+                                    <option selected>Select property type</option>
+                                    <option value="0">Single Family</option>
+                                    <option value="15">Townhouse</option>
+                                    <option value="1,2,3">2 to 4 Units</option>
+                                    <option value="20">Condo</option>
+                                </select>
+                                <span style="color:red" id="errorPropertyType"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 pUsage">
+                                <label for="">Property Usage</label>
+                                <select id="propertyUsage" class="form-control">
+                                    <option selected>Select property usage</option>
+                                    <option value="0">Primary residence</option>
+                                    <option value="1">Investment</option>
+                                    <option value="2">Second Home</option>
+                                </select>
+                                <span style="color:red" id="errorPropertyUsage"></span>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3">
+                                <div class="text-center form-btn">
+                                    <a href="javascript:void(0);" id="getResult" class="btn m-0">Get Result</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="resultTab">
+                    <div id="tablistHide">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="one" name="exampleckeck" aria-controls="" aria-selected="true">All <span class="nTag" id="setCount"></span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="two-tab" name="exampleckeck" aria-controls="" aria-selected="false">30-Year Fixed</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="three-tab" name="exampleckeck" aria-controls="" aria-selected="false">20-Year Fixed</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="forth-tab" name="exampleckeck" aria-controls="" aria-selected="false">15-Year Fixed</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="cover-spin"></div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="one-tab">
+                            <div class="lenderDetails" id="rateDetails">
+                            </div>
+
+                        </div>
+                    </div>
+                    <h3 style="text-align:left">
+                        <span style="color:red" id="recordnotFound"></span>
+                    </h3>
+                    <div class="resultTabBtn" id="Showall">
+                        <a href='@Url.Action("Started", "Account")' class="btn c-bg-btn">Personalize your rates</a>
+                    </div>
+                </div>
+                </div>
+            <div class="col-md-12 p-0">
+                <div class="mcContent">
+                    <ul class="m-0">
+                        <li>Rates and fees are as of time displayed above and are subject to change without notice.</li>
+
+                        <li>
+                            Hypotec Mortgage does not charge an origination fee. The one-time costs shown include points/credits and third-party fees. An escrow deposit,
+                            pre-paid interest, and other charges may be required depending on your situation.
+                        </li>
+
+                        <li>Monthly payments do not include taxes and insurance premiums. Your actual monthly housing expenses will be higher.</li>
+                        <li>We don’t yet have your complete financial picture. Your actual rate, payment and costs could be higher. Get an official Loan Estimate before choosing a loan.</li>
+                        <li>Loan approval is subject to underwriter review: not everyone who applies will be approved.</li>
+                        <li>We also assume: closing costs are paid out of pocket and debt-to-income ratio is below 35%.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,52 @@
+﻿@model List<Hypotec.Web.Models.ResourceModel>
+@{
+    ViewData["Title"] = "Resource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- start contact us page HTML code -->
+<section class="resourcePage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <div class="all-caption">
+                    <h2>Resource  <span class="blue-text">Center</span></h2>
+                    <p>
+                        At Hypotec, we pride ourselves in staying up to date on everything mortgage and real estate related.  We want you to
+                        be educated about the industry as well!  Check out some helpful articles below to build your knowledge base on today’s
+                        trending topics.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-6"></div>
+            <div class="col-md-4 col-xl-3 col-lg-3">
+                <div class="filterBox">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-right-0" placeholder="Search Articles" id="serachArticle" />
+                        <div class="input-group-prepend">
+                            <div class="input-group-text border-left-0 bg-transparent"><i class="fas fa-search"></i></div>
+                        </div>
+                    </div>
+                    <div class="filterHeading">
+                        <h4>Filter by:</h4>
+                    </div>
+                    <div class="tagList">
+                        <ul class="p-0 m-0" id="myid">
+                            <li id="1"><span class="active">All</span> <small class="active">@Model.Count()</small></li>
+                            <li id="2"><span>Homebuying</span> <small>@Model.Where(x => x.Tag == "Homebuying").Count()</small></li>
+                            <li id="3"><span>Refinancing</span> <small>@Model.Where(x => x.Tag == "Refinancing").Count()</small></li>
+                            <li id="4"><span>News & Insights</span> <small>@Model.Where(x => x.Tag == "News & Insight").Count()</small></li>
+                            <li id="5"><span>Tools</span> <small>@Model.Where(x => x.Tag == "Tools").Count()</small></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-xl-8 col-lg-8 offset-xl-1 offset-lg-1 filterBox" id="divResourceList">
+
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+<!-- end contact us page HTML code -->

@@ -1,0 +1,393 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<!-- start banner HTML code -->
+
+<section class="banner-bg">
+    <div class="img-one"><img src="~/images/dots.png" class="img-fluid" alt="" /></div>
+    <div class="img-two"><img src="~/images/dots-one.png" class="img-fluid" alt="" /></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 p-0">
+                <div class="table-div">
+                    <div class="all-caption banner-caption table-cell-div">
+                        <h2>A New Way of <br> <span class="blue-text">Lending</span></h2>
+                        <p>
+                            a completely open experience that allows you to shop around for the best rates across the
+                            board. Our experienced loan officers have open door access to all wholesale lenders to
+                            ensure your loan is secured with today’s best rates. No gimmicks, no tricks. Just best
+                            in
+                            class service working on behalf of what’s best for you.
+                        </p>
+                        <a href='@Url.Action("Started", "Account")' class="btn c-bg-btn text-white">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 d-none d-md-block d-lg-block d-xl-block">
+                <div class="table-div table-cell-div">
+                    <div class="mobile-men">
+                        <img src="~/images/banner-img.png" class="img-fluid" alt="" />
+                        <div class="man-img">
+                            <img src="~/images/man.png" class="img-fluid" alt="" />
+                        </div>
+                        <div class="alllinkbox">
+                            <a href='@Url.Action("Refinance", "LoanRate")'>
+                                <div class="linkbox">
+                                    <img src="~/images/mobile-img/wallet.png" class="img-fluid" alt="" />
+                                    <p>Customized Rates</p>
+                                </div>
+                            </a>
+                            <a href='@Url.Action("Started", "Account")'>
+                            <div class="linkbox lbtwo">
+                                <img src="~/images/mobile-img/home.png" class="img-fluid" alt="" />
+                                <p>Get Started</p>
+                            </div>
+                            </a>
+                            <a href='@Url.Action("Contact", "Aboutus")'>
+                                <div class="linkbox lbthree">
+                                    <img src="~/images/mobile-img/contact-us.png" class="img-fluid" alt="" />
+                                    <p>Contact Us </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end banner HTML code -->
+<!-- start about us section HTML code -->
+<section class="about-us-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="all-caption about-caption">
+                    <h4>A NEW WAY OF LENDING</h4>
+                    <h2>Why <span class="blue-text">Hypotec</span></h2>
+                    <p>
+                        At Hypotec, we’re proud to offer an experienced team who’s here to work for you. Whether
+                        you’re shopping
+                        for a new home, looking to refinance your current loan or just curious about the home buying
+                        process, our
+                        dedicated loan officers are here to help you navigate the numbers. Our best in industry
+                        digital platform gives you
+                        a simple, clear experience start to finish.
+                    </p>
+                    <div class="five-point">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 col-xl-3">
+                                <div class="read-point upper-text">
+                                    <i class="far fa-file-alt"></i>
+                                    <span>Mortgage Adviser</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 col-xl-3">
+                                <div class="read-point upper-text">
+                                    <i class="far fa-file-alt"></i>
+                                    <span>Best Rates</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 col-xl-3">
+                                <div class="read-point upper-text">
+                                    <i class="far fa-file-alt"></i>
+                                    <span>Simple & Secure</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 col-xl-3">
+                                <div class="read-point upper-text">
+                                    <i class="far fa-file-alt"></i>
+                                    <span>Total Transparency</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href='@Url.Action("Company", "AboutUs")' class="btn">Learn More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end about us section HTML code -->
+<!-- start today rate section HTML code -->
+<section class="today-rates-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="homeTabs">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <div class="tabsHeading">
+                                <h3>Empowered To Pick <span class="blue-text">The Best</span></h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="lenderIndexDetails IndexRatecenter" id="rateDetails1">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row flex-column-reverse row flex-xl-row">
+                        <div class="col-md-4 col-12 d-flex align-items-center">
+                            <div class="accordion" id="accordionExample">
+                                <div class="text-left">
+                                    <div class="" id="headingOne">
+                                        <div class="form-group form-check m-0" data-toggle="collapse"
+                                             data-target="#collapseOne" aria-expanded="true"
+                                             aria-controls="collapseOne">
+                                            <label class="form-check-label" for="one">
+                                                <i class="fas fa-chevron-down"></i> Legal Disclosures
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="homelistbtn text-center text-xl-center">
+                                <a href='@Url.Action("Refinance", "LoanRate")' class="btn">Customize Your Rate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-left">
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+                                <div class="card-body px-0 pt-0">
+                                    <div class="mcContent">
+                                        <h5>30-year Fixed-Rate Loan:</h5>
+                                        <p>
+                                            The payment on a $200,000 30-year Fixed-Rate Loan at 3.375% (3.646% APR)
+                                            is
+                                            $884.20 for the cost of 2.25 point(s) due at closing and a loan-to-value
+                                            (LTV) of 74.91%. One point is equal to one
+                                            percent of your loan amount. Payment does not include taxes and
+                                            insurance.
+                                            The actual payment amount will be greater. Some state and county maximum
+                                            loan amount restrictions may apply.
+                                        </p>
+
+                                        <h5>15-year Fixed-Rate Loan:</h5>
+                                        <p>
+                                            The payment on a $200,000 15-year Fixed-Rate Loan at 2.75% (3.174% APR)
+                                            is
+                                            $1,357.25 for the cost of 1.875 point(s) due at closing and a
+                                            loan-to-value
+                                            (LTV) of 74.91%. One point is equal to
+                                            one percent of your loan amount. Payment does not include taxes and
+                                            insurance. The actual payment amount will be greater. Some state and
+                                            county
+                                            maximum loan amount restrictions
+                                            may apply.
+                                        </p>
+
+                                        <h5>FHA Loan:</h5>
+                                        <p>
+                                            Rate is fixed. The payment on a $203,500, 30-year fixed rate loan at
+                                            2.75%
+                                            and 74.91% loan-to-value (LTV) is $962.79 with 1.50 Points due at
+                                            closing.
+                                            Payment includes a one
+                                            time upfront mortgage insurance premium (MIP) at 1.75% of the base loan
+                                            amount and a monthly MIP calculated at 0.8% of the base loan amount. For
+                                            mortgages with a loan-to-value
+                                            (LTV) ratio of 74.91%, the 0.8% monthly MIP will be paid for the first
+                                            11
+                                            years of the mortgage term, or the end of the mortgage term, whichever
+                                            comes
+                                            first. Thereafter, the
+                                            monthly loan payment will consist of equal monthly principal and
+                                            interest
+                                            payments only until the end of the loan. Payment does not include taxes
+                                            and
+                                            insurance premiums. The
+                                            actual payment amount will be greater. Some state and county maximum
+                                            loan
+                                            amount restrictions may apply. The Annual Percentage Rate (APR) is
+                                            3.661%.
+                                        </p>
+
+                                        <h5>30-year Fixed-Rate VA Loan:</h5>
+                                        <p class="pb-2">
+                                            Rate is fixed. The payment on a $204,601, 30-year fixed-rate
+                                            loan at 2.75% and 76.63% loan-to-value (LTV) is $835.27 with 1.625
+                                            Points
+                                            due at closing. The Annual
+                                            Percentage Rate (APR) is 3.149%. Payment does not include taxes and
+                                            insurance premiums. The actual payment amount will be greater. Some
+                                            state
+                                            and county maximum loan amount
+                                            restrictions may apply. VA loans do not require PMI. The VA loan is a
+                                            benefit of military service and only offered to veterans, surviving
+                                            spouses
+                                            and active duty military.
+                                        </p>
+
+                                        <h5>Assumptions</h5>
+                                        <ul class="m-0">
+                                            <li>Mortgage rates could change daily.</li>
+
+                                            <li>
+                                                Actual payments will vary based on your individual situation and
+                                                current
+                                                rate.
+                                            </li>
+
+                                            <li>Some products may not be available in all states.</li>
+                                            <li>
+                                                Some jumbo products may not be available to first time home buyers.
+                                            </li>
+                                            <li>Lending services may not be available in all areas.</li>
+                                            <li>Some restrictions may apply.</li>
+                                            <li>
+                                                Based on the purchase/refinance of a primary residence with no cash
+                                                out
+                                                at closing.
+                                            </li>
+                                            <li>
+                                                We assumed (unless otherwise noted) that: closing costs are paid out
+                                                of
+                                                pocket; this is your primary residence and is a single family home;
+                                                debt-to-income ratio is less than
+                                                30%; and credit score is over 720, or in the case of certain Jumbo
+                                                products we assume a credit score over 740; and an escrow account
+                                                for
+                                                the payment of taxes and insurance.
+                                                The lock period for your rate is 40 days.
+                                            </li>
+
+                                            <li>
+                                                If LTV > 80%, PMI will be added to your monthly mortgage payment,
+                                                with
+                                                the exception of Military/VA loans. Military/VA loans do not require
+                                                PMI.
+                                            </li>
+                                            <li>
+                                                Please remember that we don't have all your information. Therefore,
+                                                the
+                                                rate and payment results you see from this calculator may not
+                                                reflect
+                                                your actual situation.
+                                                Quicken Loans offers a wide variety of loan options. You may still
+                                                qualify for a loan even if your situation doesn't match our
+                                                assumptions.
+                                                To get more accurate and
+                                                personalized results, please call (800) 251-9080 to talk to one of
+                                                our
+                                                mortgage experts.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end today rate section HTML code -->
+<!-- start testimonial section HTML code -->
+<section class="testimonial main-testimonial-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption text-center">
+                    @*<h4>CLIENT'S WORDS</h4>*@
+                    <h2>What Are <span class="blue-text">Clients Saying</span></h2>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="testi-slider">
+                    <div class="testimonial-section owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="d-flex flex-column-reverse flex-md-row flex-lg-row flex-xl-row ">
+                                <div class="col-md-6">
+                                    <div class="all-caption client-caption">
+                                        <p>
+                                            Hypotec was absolutely wonderful. They were timely, efficient, and extremely competent about our refinance process. They
+                                            made what seemed like a daunting process smooth and seamless. Thank you for all that you’ve helped with!
+                                        </p>
+                                        <h5>Tara Griffith</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="client-img">
+                                        <img src="~/images/blog1.png" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="d-flex flex-column-reverse flex-md-row flex-lg-row flex-xl-row ">
+                                <div class="col-md-6">
+                                    <div class="all-caption client-caption">
+                                        <p>
+                                            The HYPOTEC team is amazing!!! I dealt with Richard and I can only say it was a 5 star experience. Knowledgeable, trustworthy,
+                                            experienced and a just plain - perfect experience. I bought a house in a new state so having a lender be more than a supportive
+                                            voice but a stellar communicator was ideal! I can’t thank them enough really makes our new home feel like a smooth experience
+                                            with people we could count on! I highly recommend them.
+                                        </p>
+                                        <h5>Joyce Trojanowski</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="client-img">
+                                        <img src="~/images/blog2.png" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="d-flex flex-column-reverse flex-md-row flex-lg-row flex-xl-row ">
+                                <div class="col-md-6">
+                                    <div class="all-caption client-caption">
+                                        <p>
+                                            Refinancing your home? Having refinanced several homes in the past, I will say with 100% certainty that you will not find
+                                            someone better to work with than Pejman Gabayan at Hypotec. In the best of times, refinancing can be a complex, frustrating
+                                            experience. Add in the uncertainty that Covid-19 brought to the market, and things can be even more confusing and stressful.
+                                            Pejman's knowledgeable, patient guidance through the entire process eliminated my stress and produced a positive financial
+                                            outcome I was extremely pleased with. Beyond the business basics, Pejman treated me like his best friend, and he was sincere.
+                                            I will never forget the helpful, genuinely caring experience I had with Pejman and Hypotec.
+                                        </p>
+                                        <h5>Ward Luthi</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="client-img">
+                                        <img src="~/images/blog3.png" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end testimonial section HTML code -->
+<!-- start form section HTML code -->
+<section class="home-form">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="all-caption text-center">
+                    <h2>Get<span class="blue-text"> Started</span></h2>
+                    <p>Your loan process has never been this easy.</p>
+                    <div class="dualbtn">
+                        <a href='@Url.Action("StartPurchase", "Account")' class="btn">Purchase</a>
+                        <a href='@Url.Action("StartRefinance", "Account")' class="btn btn-border">Refinance</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end form section HTML code -->
+<script src="~/js/Custom/IndexRate.js"></script>

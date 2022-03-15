@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewData["Title"] = "Careers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start contact us page HTML code -->
+<section class="careerPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="careerImage">
+                    <img src="~/images/careers-photo.jpg" class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contactusContent">
+                    <div class="all-caption careerText" S>
+                        <h2>Careers </h2>
+                        <p>At Hypotec, we’re redefining the industry.  With this comes rapid growth.  Are you in?</p>
+                        <p>
+                            Hypotec operates fully remote Monday – Friday, 9AM – 6PM.  Our interview process is always  fully virtual.
+                            We value our employees and always strive to maintain a healthy work life balance.  Think you’ve got what it takes
+                            to add value to our innovative team?  Check below to see all current openings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="careerForm">
+                    <h4>Open <span class="blue-text">Positions</span></h4>
+
+                    <div class="careerBase">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-8 col-xl-10 col-lg-10">
+                                <div class="careerInfo">
+                                    <h3>Loan Officer</h3>
+                                    @*<p>Hypotec is looking for Loan Officers!</p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-2 col-xl-2">
+                                <div class="text-center form-btn p-0">
+                                    <a href='@Url.Action("CareerDetails", "Aboutus", new { postid = 1})' class="btn">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="careerBase">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-8 col-xl-10 col-lg-10">
+                                <div class="careerInfo">
+                                    <h3>Loan Processor</h3>
+                                    @*<p>Hypotec is looking for Remote Loan Processors! </p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-2 col-xl-2">
+                                <div class="text-center form-btn p-0">
+                                    <a href='@Url.Action("CareerDetails", "Aboutus", new { postid = 2})' class="btn">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="careerBase">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-8 col-xl-10 col-lg-10">
+                                <div class="careerInfo">
+                                    <h3>Underwriter</h3>
+                                    @*<p>Hypotec is looking for a Remote Social Media Specialist!</p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-2 col-xl-2">
+                                <div class="text-center form-btn p-0">
+                                    <a href='@Url.Action("CareerDetails", "Aboutus",new { postid = 4})' class="btn">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="careerBase">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-8 col-xl-10 col-lg-10">
+                                <div class="careerInfo">
+                                    <h3>Social Media Specialist</h3>
+                                    @*<p>Hypotec is looking for a Remote Social Media Specialist!</p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-2 col-xl-2">
+                                <div class="text-center form-btn p-0">
+                                    <a href='@Url.Action("CareerDetails", "Aboutus",new { postid = 3})' class="btn">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="careerBase">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-8 col-xl-10 col-lg-10">
+                                <div class="careerInfo">
+                                    <h3>CRM Administrator</h3>
+                                    @*<p>Hypotec is looking for a fully-remote CRM Administrator! </p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-2 col-xl-2">
+                                <div class="text-center form-btn p-0">
+                                    <a href='@Url.Action("CareerDetails", "Aboutus", new { postid = 0})' class="btn">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="boxHover">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 p-0 border-right">
+                <div class="hoverArea text-center">
+                    <a href='https://www.indeed.com/cmp/Hypotec-1/reviews' class="">
+                        <h3 class="m-0 blue-text">Employee Satisfaction</h3>
+                        <p>Our employees love working with us.  Don’t just take our word on it – see for yourself!</p>
+                        <p>Read More...</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 p-0 border-right">
+                <div class="hoverArea text-center">
+\                    <a href='@Url.Action("Company", "AboutUs")' class="">
+                        <h3 class="m-0 blue-text">Why Hypotec </h3>
+                        <p>
+                            We’ve been in the mortgage industry since 2004 and are continually growing and expanding.  Enjoy working remotely on a
+                            team that’s invested in your career advancement.
+                        </p>
+                        <p>Read More...</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 p-0">
+                <div class="hoverArea text-center">
+
+                    <a href='@Url.Action("EmployeeBenifit", "AboutUs")' class="">
+                        <h3 class="m-0 blue-text">Employee Benefits</h3>
+                        <p>Join the team and you’ll receive advanced in-depth training programs along with health benefits.</p>
+                        <p>Read More...</p>
+                    </a>
+                    @*<a href='@Url.Action("CareerDetails", "Aboutus")' class="">Read More...</a>*@
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- end contact us page HTML code -->

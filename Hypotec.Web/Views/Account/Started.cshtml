@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Started";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- start start page HTML code -->
+<section class="start-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="start-heading text-center">
+                    <h3>Let's Get <span class="blue-text">Started!</span> </h3>
+                    <h4>First Things First, Are You:</h4>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center flex-column flex-md-row flex-lg-row flex-xl-row text-center">
+                    <div class="purchaseArea">
+
+                        <a href='@Url.Action("StartPurchase", "Account")' class="btn">Looking to Purchase</a>
+                    </div>
+                    <div class="orText">
+                        <p>OR</p>
+                    </div>
+                    <div class="purchaseArea">
+                        <a href='@Url.Action("StartRefinance", "Account")'  class="btn btn-border">Looking to Refinance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end start page HTML code -->

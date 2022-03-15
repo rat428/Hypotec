@@ -1,0 +1,152 @@
+﻿@model Hypotec.Web.Models.AdvisorModel
+
+@{
+    ViewData["Title"] = "EditAdvisor";
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+
+<section class="register-page Edit-advisor">
+
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Advisor updated successfully .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong> Advisor not updated.
+                <button type="button" class="close" data-dismiss="alert"></button>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-heading">
+                    <h2>Edit Advisor <span class="blue-text"> Here </span></h2>
+                </div>
+                <div class="form-area">
+                    <h4>Your information is always private.</h4>
+
+                    <form class="row" id="savingform" method="post" enctype="multipart/form-data" asp-action="UpdateAdvisor" asp-controller="Advisor">
+                        <input asp-for="Id" type="hidden" id="advisorid" />
+
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" placeholder="Enter Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label asp-for="RegistrationNumber" class="control-label"></label>
+                                <input asp-for="RegistrationNumber" placeholder="Enter Reg. Number" class="form-control" />
+                                <span asp-validation-for="RegistrationNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" placeholder="Enter Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        @*<div class="col-md-4 col-6">
+                                <div class="form-group">
+                                    <label asp-for="Address" class="control-label"></label>
+                                    <input asp-for="Address" id="address" placeholder="Enter Address" class="form-control" />
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>*@
+                        <div class="form-group col-8 col-sm-8 col-md-4 col-xl-4 col-lg-3">
+
+                            <div class="input-group d-flex">
+                                <div class="w119">
+                                    <label for="">Office Number</label>
+                                    <input asp-for="Office" id="Office" class="form-control" placeholder="Enter Office Number" />
+                                    <span asp-validation-for="Office" id="errorOffice" class="text-danger"></span>
+                                </div>
+                                <div class="w118">
+                                    <label for=""> Ext</label>
+                                    <input asp-for="Ext" id="Ext" class="form-control border-left-0 p-0 text-center" placeholder="Enter Ext" />
+                                    <span asp-validation-for="Ext" id="errorExt" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label asp-for="Text" class="control-label"></label>
+                                <input asp-for="Text" placeholder="Enter Text Number" class="form-control" />
+                                <span asp-validation-for="Text" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-group">
+                                <label asp-for="Call" class="control-label"></label>
+                                <input asp-for="Call" placeholder="Enter Call Number" class="form-control" />
+                                <span asp-validation-for="Call" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="">
+                                <label class="control-label">State</label>
+                                <div class="">
+                                    @Html.ListBoxFor(model => model.LicenseState, new MultiSelectList(Model.lstState, "Value", "Text"), new { @class = "form-control", multiple = "multiple", id = "Subjects_dropdown" })
+                                </div>
+                                <span asp-validation-for="LicenseState" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-6">
+                            <div class="form-group">
+                                <label asp-for="About" class="control-label"></label>
+                                <textarea asp-for="About" placeholder="Enter About" class="form-control"></textarea>
+                                <span asp-validation-for="About" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="resumeArea">
+                                <label asp-for="Image" class="control-label"></label>
+                                <div class="custom-file">
+                                    <input asp-for="Image" class="custom-file-input form-control" id="image">
+                                    <label class="custom-file-label" for="image">Choose image</label>
+                                </div>
+                                <span asp-validation-for="Image" id="errorimage" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <input type="hidden" asp-for="Langitude" id="hdnlongitude" value="" />
+                            <input type="hidden" asp-for="Latitude" id="hdnlatitude" value="" />
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <div class="twoButton">
+                                        <input type="submit" value="Update" onclick="javascript:return ValidateAdvisor();" class="btn" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+
+<script>
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('address'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            $('#hdnlatitude').val(place.geometry.location.lat());
+            $('#hdnlongitude').val(place.geometry.location.lng());
+        });
+    });
+</script>

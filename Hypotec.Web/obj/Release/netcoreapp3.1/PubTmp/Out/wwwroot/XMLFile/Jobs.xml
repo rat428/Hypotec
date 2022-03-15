@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JobList>
+  <Job>
+    <Id>1</Id>
+    <Title>Generic Mouse</Title>
+    <SubTitle>30.00</SubTitle>
+    <Description>Details of Job</Description>
+  </Job>
+  <Job>
+    <Id>2</Id>
+    <Title>Generic Keyboard</Title>
+    <SubTitle>20.00</SubTitle>
+    <Description>Details of Job</Description>
+  </Job>
+  <Job>
+    <Id>3</Id>
+    <Title>Generic Hard Drive</Title>
+    <SubTitle>100.00</SubTitle>
+    <Description>Details of Job</Description>
+  </Job>
+  <Job>
+    <Id>
+    </Id>
+    <Title>werwerwerewt</Title>
+    <SubTitle>cdgrtgfcdx</SubTitle>
+    <Description>dfgdsgtesrtert</Description>
+  </Job>
+</JobList>

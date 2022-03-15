@@ -1,0 +1,244 @@
+﻿
+@{
+    ViewData["Title"] = "StartRefinance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="careerDetailsPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" id="divpagefirstr">
+                <div class="questionlist">
+                    <div class="questionText">
+                        <h2>Why do you want to <span class="blue-text">refinance?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios19" value="option19">
+                                <label class="form-check-label" for="exampleRadios19">
+                                    Lower my monthly payment
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios20" value="option20">
+                                <label class="form-check-label" for="exampleRadios20">
+                                    Take cash out to pay for other expenses (home improvement, emergency fund, college tuition)
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios21" value="option21">
+                                <label class="form-check-label" for="exampleRadios21">
+                                    Pay off my existing mortgage sooner
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios22" value="option22">
+                                <label class="form-check-label" for="exampleRadios22">
+                                    Consolidate high-interest debts into a single payment
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios23" value="option23">
+                                <label class="form-check-label" for="exampleRadios23">
+                                    Other
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="questionlist" id="div1r">
+                    <div class="questionText mt-3">
+                        <h2>Explain in your own words?</h2>
+                        <input type="text" class="form-control" id="explainWord">
+                    </div>
+                </div>
+                <div class="wzrdbtn">
+                    <button class="btn" id="btnNextR" onclick="NextPageR();" disabled>Next</button>
+                </div>
+            </div>
+            <div class="col-md-12" id="divpagesecondR">
+                <div class="questionlist" id="div2">
+                    <div></div>
+                    <div class="col-md-8">
+                        <div class="questionText mt-3">
+                            <h2>
+                                Add your property to personalize rates
+                            </h2>
+                            <div class="col-md-12 px-0">
+                                <div class="form-group">
+                                    <div class="col-md-8 px-0">
+                                        <label for="">Address </label>
+                                        <input type="text" id="addPropertyRateAdd" class="form-control" />
+
+                                    </div>
+                                </div>
+                                <div class="form-group" id="divaptunit">
+                                    <div class="col-md-4 px-0">
+                                        <label for="">Apt/Unit</label>
+                                        <input type="text" id="aptunit" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="openProp">
+                                <div class="form-group">
+                                    <div class="col-md-4 px-0">
+                                        <label for="">City </label>
+                                        <input type="text" id="City" class="form-control" />
+
+                                    </div>
+                                    <div class="col-md-4 px-0">
+                                        <label for="">State </label>
+                                        <input type="text" id="State" class="form-control" />
+
+                                    </div>
+                                    <div class="col-md-4 px-0">
+                                        <label for="">Zip Code </label>
+                                        <input type="text" id="zipcode" class="form-control" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="wzrdbtn">
+                    <button class="btn" id="btnPrevious1" onclick="PreviousPage1();">previous</button>
+                    <button class="btn" id="btnNextPager2" onclick="NextPager2();" disabled>Next</button>
+
+                </div>
+            </div>
+            <div class="col-md-12" id="divpagesecondThird">
+                <div class="questionlist">
+                    <div class="questionText">
+                        <h2>Tell us more about the property you <span class="blue-text">are refinancing?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios24" value="option24">
+                                <label class="form-check-label2" for="exampleRadios24">
+                                    Primary residence
+                                </label>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios25" value="option25">
+                                <label class="form-check-label2" for="exampleRadios25">
+                                    Second home
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios26" value="option26">
+                                <label class="form-check-label2" for="exampleRadios26">
+                                    Investment
+                                </label>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="questionlist">
+                    <div class="questionText">
+                        <h2>What property type  <span class="blue-text">would this be?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios27" value="option27">
+                                <label class="form-check-label3" for="exampleRadios27">
+                                    Single Family
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios28" value="optio28">
+                                <label class="form-check-label3" for="exampleRadios28">
+                                    Townhouse or Condo
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios29" value="option29">
+                                <label class="form-check-label" for="exampleRadios29">
+                                    2 to 4 units
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios30" value="option30">
+                                <label class="form-check-label" for="exampleRadios30">
+                                    Cooperative
+                                </label>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="questionText mt-3">
+                        <h2>Estimated home value?</h2>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                            </div>
+
+                            <input type="text" class="form-control border-left-0" value="" placeholder="Amount" id="extimatedHomeVal" />
+                        </div>
+
+                    </div>
+                    <div class="wzrdbtn">
+                        <button class="btn" id="btnPrevious2" onclick="PreviousPage2();">previous</button>
+                        <a type="button" href='@Url.Action("GetStarted", "Account")' class="btn" id="btnNextPageToRefinance" disabled>
+                            Next
+
+                        </a>
+                        @*<button  class="btn" id="btnNextPage" onclick="NextPage1();" disabled>Next</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('addPropertyRateAdd'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+            for (var i = 0; i < place.address_components.length; i++) {
+                for (var j = 0; j < place.address_components[i].types.length; j++) {
+
+                    if (place.address_components[i].types[j] == "postal_code") {
+                        $('#zipcode').val(place.address_components[i].long_name);
+                    }
+                    if (place.address_components[i].types[j] == "administrative_area_level_1") {
+                        $('#State').val(place.address_components[i].long_name);
+                    }
+                    if (place.address_components[i].types[j] === "locality") {
+                        $('#City').val(place.address_components[i].long_name);
+                    }
+                }
+            }
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            //document.getElementById('txtLatitude').value = place.geometry.location.lat();
+            //document.getElementById('txtLongitude').value = place.geometry.location.lng();
+        });
+    });
+</script>

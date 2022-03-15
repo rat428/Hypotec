@@ -1,0 +1,145 @@
+﻿@model Hypotec.Web.Models.AdvisorModel
+@{
+    ViewData["Title"] = "AgentProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- start agent profile page HTML code -->
+<section class="agentprofilePage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption comm-text">
+                    <h2>Agent <span class="blue-text">Profile</span></h2>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <div class="imgnameArea backareabase">
+                    <div class="d-flex modalimg">
+                        <img src="@Model.ImagePath" class="img-fluid" alt="" />
+                        <div class="pl-4">
+                            <h3>@Model.Name</h3>
+                            <small class="blue-text">NMLS ID: @Model.RegistrationNumber</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgnameArea backareabase p-0">
+                    <div class="innerwhitearea pb-0">
+                        <h5><i class="far fa-bookmark blue-text"></i> Contact Info</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="agentInfoarea">
+                                    <p>Office</p>
+                                    @if (@Model.Office != null && @Model.Office != "")
+                                    {
+                                        <a href="tel:+@Model.Office;ext=@Model.Ext">@Model.Office.Substring(0, 3) Hypotec ext @Model.Ext</a>
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="agentInfoarea">
+                                    <p>Text</p>
+                                    <a href="sms:+@Model.Text">@Model.Text</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="agentInfoarea">
+                                    <p>Call</p>
+                                    <a href="tel:+@Model.Call">@Model.Call</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="agentInfoarea">
+                                    <p>Email</p>
+                                    <a href="mailto:@Model.Email">@Model.Email</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6 pr-0">
+                            <div class="dualfullbtn">
+                                @*<a href="#" class="btn"> Purchase Qualifier </a>*@
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 pl-0">
+                            <div class="dualfullbtn">
+                                @*<a href='@Url.Action("Started", "Account")' class="btn">Apply Now</a>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <div class="backareabase">
+                    <div class="aboutagentarea">
+                        <h4>About <span class="blue-text"> Agent</span></h4>
+                        @Model.About
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dualfullbtn">
+                            <a href="#" class="btn"> Begin Your Digital application </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="backareabase">
+                    <div class="aboutagentarea">
+                        <h4>Testimonials</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testiicons border p-3">
+                                    <i class="fas fa-quote-left blue-text pt-3"></i>
+                                    <p>“Ben was always cordial and respectful, thanked me for my service. Would recommend him in the future.</p>
+                                    <h6>Emery Swan</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testiicons border p-3">
+                                    <i class="fas fa-quote-left blue-text pt-3"></i>
+                                    <p>
+                                        “Ben and Hypotec were great to work with. Ben made our refinance seamless and easy.
+                                        He has great customer service and professionalism.”
+                                    </p>
+                                    <h6>Casey Coon</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testiicons border p-3">
+                                    <i class="fas fa-quote-left blue-text pt-3"></i>
+                                    <p>
+                                        “Ben was very interactive from the beginning of the process and maintained constant contact throughout.
+                                        He was very informative with each milestone that was completed and for the next step that would take place.”
+                                    </p>
+                                    <h6>Alonso Taylor</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end agent profile page HTML code -->
+<!-- end last section HTML code -->
+<section class="home-form mt-0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="all-caption text-center">
+                    <h2>Get A Real Approval In <span class="blue-text"> Just Minutes!</span></h2>
+                    <p>It’s time to find the perfect mortgage for you.</p>
+                    <div class="dualbtn">
+                        <a href='@Url.Action("Started", "Account")' class="btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end last section HTML code -->

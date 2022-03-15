@@ -1,0 +1,324 @@
+﻿@model List<Hypotec.Web.Models.AdvisorModel>
+@{
+    ViewData["Title"] = "RealEstateAgent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- start contact us page HTML code -->
+<section class="realagentPage">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong>Slot booked successfully.
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        <div class="row flex-column-reverse flex-md-row flex-lg-row flex-xl-row">
+            <div class="col-md-6">
+                <div class="realestateagentContent">
+                    <div class="all-caption agentText">
+                        <h2>
+                            @*Real Estate Agent (take off and what do they do)*@
+                            Real Estate <span class="blue-text"> Agent</span> <br />
+                            @*What Do They <span class="blue-text"> Do? </span>*@
+                        </h2>
+                        <p>
+                            There’s no doubt about it – a trusted real estate agent can help make buying or selling a house a little easier and a
+                            lot less stressful.  While the web has transformed the way people shop for homes and empowers you as a buyer to go into
+                            your house hunt well informed, the sheer amount of information out there will be difficult to navigate alone.  Let our
+                            trusted partners help you seamlessly through the process.
+                        </p>
+                        <div class="getagentbtn">
+                            <a href='@Url.Action("AgentSlotBooking", "FindAndExpert")' class="btn">Get An Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="agentImage text-center">
+                    <img src="~/images/agent.png" class="img-fluid" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bgBlue">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="">
+                    <img src="~/images/what-agent.png" class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-1">
+                <div class="blueBgcontent">
+                    <div class="all-caption agentList">
+                        <h2 class="text-white">What Is A Real Estate Agent? </h2>
+                        <p class="text-white">
+                            Real Estate Agents are professionals specially licensed to organize and assist in all real estate transactions.
+                            A listing agent will represent the seller in a transaction while a buyer’s agent will represent the buyer in a real
+                            estate transaction.  These licensed professionals are paid in commissions and always work in the best interest of their
+                            client.  They are a knowledgeable resource who adds value to any home transaction.
+                        </p>
+                        @*<div class="getagentlist text-white">
+                                <ul class="m-0">
+                                    <li>Listing agents are real estate agents who represent the seller in a real state transaction.</li>
+                                    <li>Buyer’s agents represent the buyer in a real estate transaction.</li>
+                                </ul>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="threebox text-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption agentText">
+                    <h2>Getting Started Is <span class="blue-text"> Easy </span> </h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="scheduleBox">
+                    <h3>1. Schedule a call</h3>
+                    <p>Tell us what you’re looking for, then we’ll find the best specialist in your area for the job.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="scheduleBox">
+                    <h3>2. Meet your match</h3>
+                    <p>Their help doesn’t end with the search – your agent will help finalize everything, too.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="scheduleBox">
+                    <h3>3. Save on a new home</h3>
+                    <p>We do things differently, and we pass the savings along — you’ll get $2,000 off your closing costs.</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="threeboxbtn getagentbtn">
+                    <a href='@Url.Action("AgentSlotBooking", "FindAndExpert")' class="btn">Get An Agent</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mortgageCalculator mt-5">
+                    <h4>Start Searching Now</h4>
+                    <div class="formBase">
+                        <form class="row lign-items-center" action="#">
+                            <div class="form-group col-5 mb-3">
+                                <label for="">Search Area</label>
+                                <div class="input-group">
+
+                                    <input type="text" onkeypress="myFunction()" class="form-control" id="serachAddress" />
+                                </div>
+                            </div>
+                            @*<div class="form-group col mb-3">
+                                    <label for="">Search Radius</label>
+                                    <select class="form-control" id="radius">
+                                        <option value="10">10 mi</option>
+                                        <option value="25">25 mi</option>
+                                        <option value="50">50 mi</option>
+                                        <option value="100">100 mi</option>
+                                        <option value="200">200 mi</option>
+                                        <option value="500" selected>500 mi</option>
+                                    </select>
+                                </div>*@
+                            <div class="form-group col mb-3">
+                                <label for="">Results</label>
+                                <select class="form-control" id="result">
+                                    <option value="24">25</option>
+                                    <option value="50">50</option>
+                                    <option value="75">75</option>
+                                    <option value="100" selected>100</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <div class="text-center form-btn pt-4">
+                                    <input type="hidden" id="hdnlongitude" value="" />
+                                    <input type="hidden" id="hdnlatitude" value="" />
+                                    <input type="hidden" id="hdnShortStateName" value="" />
+                                    <input type="hidden" id="hdnLongStateName" value="" />
+                                    <input type="hidden" id="hdnFullAddress" value="" />
+                                    <input type="hidden" id="hdnCityName" value="" />
+                                    <input type="hidden" id="hdnPostalCode" value="" />
+                                    <input type="hidden" id="hdnContryCode" value="" />
+                                    <input type="hidden" id="hdnFlag" value="" />
+                                    <input type="button" onclick="getAddress();" class="btn w-100" value="Search" />
+
+                                    <input type="button" onclick="SerachAdvisor();" class="btn w-100" value="Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="" id="divAdvisorContent">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="home-form">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="all-caption text-center">
+                    <h2>Get<span class="blue-text"> Started</span></h2>
+                    <p>Your loan process has never been this easy.</p>
+                    <div class="dualbtn">
+                        <a href='@Url.Action("Started", "Account")' class="btn">Home Purchase</a>
+                        <a href='@Url.Action("Started", "Account")' class="btn bg-trns">Refinance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('serachAddress'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+            for (var i = 0; i < place.address_components.length; i++) {
+                for (var j = 0; j < place.address_components[i].types.length; j++) {
+
+                    //if (place.address_components[i].types[j] == "postal_code") {
+                    //    $('#zipcode').val(place.address_components[i].long_name);
+                    //}
+                    if (place.address_components[i].types[j] == "administrative_area_level_1") {
+                        //alert(place.address_components[i].long_name);
+                        //alert(place.address_components[i].short_name);
+                        $('#hdnShortStateName').val(place.address_components[i].short_name);
+                        $('#hdnLongStateName').val(place.address_components[i].long_name);
+                        $('#hdnFlag').val("true");
+                        //$('#State').val(place.address_components[i].long_name);
+                    }
+                    //if (place.address_components[i].types[j] === "locality") {
+                    //    $('#City').val(place.address_components[i].long_name);
+                    //}
+                }
+            }
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            //document.getElementById('hdnlongitude').value = place.geometry.location.lat();
+            //document.getElementById('hdnlongitude').value = place.geometry.location.lng();
+            $('#hdnlatitude').val(place.geometry.location.lat());
+            $('#hdnlongitude').val(place.geometry.location.lng());
+            //alert('latlong');
+            //alert(place.geometry.location.lat());
+            //alert(place.geometry.location.lng());
+        });
+    });
+    function myFunction() {
+        $('#hdnlatitude').val(null);
+        $('#hdnlongitude').val(null);
+    }
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/geocode/json?place_id=ChIJd8BlQ2BZwokRAFUEcm_qrcA&key=YAIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+
+<script type="text/javascript">
+    function getAddress() {
+        if ($('#hdnFlag').val() == "") {
+            getAddressInfoByZip($('#serachAddress').val())
+        }
+        else {
+            $('#hdnFlag').val("");
+            SerachAdvisor();
+        }
+
+    }
+    function getAddressInfoByZip(zip) {
+        if (zip.length >= 5) {
+            var addr = {};
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': zip }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+
+                    if (results.length >= 1) {
+
+                        for (i = 0; i < results[0].address_components.length; ++i) {
+                            for (j = 0; j < results[0].address_components[i].types.length; ++j) {
+                                if (results[0].address_components[i].types[j] == "country") {
+                                    $('#hdnContryCode').val(results[0].address_components[i].long_name);
+                                }
+                                if (results[0].address_components[i].types[j] == "postal_code") {
+                                    $('#hdnPostalCode').val(results[0].address_components[i].long_name);
+
+                                }
+                                if (results[0].address_components[i].types[j] == "locality") {
+                                    $('#hdnCityName').val(results[0].address_components[i].long_name);
+
+                                }
+                                if (results[0].address_components[i].types[j] == "sublocality") {
+
+                                    $('#hdnFullAddress').val(results[0].address_components[i].long_name);
+                                }
+                                if (results[0].address_components[i].types[j] == "administrative_area_level_1") {
+                                    $('#hdnShortStateName').val(results[0].address_components[i].short_name);
+
+                                    $('#hdnLongStateName').val(results[0].address_components[i].long_name);
+
+                                }
+
+                            }
+                        }
+                        SerachAdvisor();
+                    }
+                    
+                }
+                else {
+
+                    SerachAdvisor();
+                }
+
+            });
+        }
+    }
+
+    function SerachAdvisor() {
+        var serachAdvisor = $("#hdnShortStateName").val() + "," + $("#hdnLongStateName").val() + "," + $("#hdnPostalCode").val() + "," + $("#hdnFullAddress").val() + "," + $("#hdnContryCode").val() + "," + $("#serachAddress").val();
+
+
+        var longitude = $("#hdnlongitude").val();
+        var latitude = $("#hdnlatitude").val();
+        //var shortStateName = $("#hdnShortStateName").val();
+        var radius = $("#radius").val();
+        var result = $("#result").val();
+        //$("#divLoader").show();
+        jQuery.ajax({
+            type: 'POST',
+            async: true,
+            url: '/Advisor/AdvisorList',
+            data: {
+                serachAdvisor: serachAdvisor,
+                longitude: longitude,
+                latitude: latitude,
+                radius: radius,
+                recordCount: result
+            },
+            success: function (data) {
+                if (data.length == 0) {
+                    $('#divAdvisorContent').html('');
+                }
+                else {
+                    $('#divAdvisorContent').html(data);
+                }
+            }
+        });
+    }
+</script>

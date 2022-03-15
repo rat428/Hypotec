@@ -1,0 +1,204 @@
+﻿
+@{
+    ViewData["Title"] = "Refinance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="purchasePage">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Slot booked successfully .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong> Slot book failed .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="twoButton">
+                    <div class="">
+                        <a href='@Url.Action("Purchase", "LoanRate")' class="btn btn-border mr-2 mr-xl-4">Purchase</a>
+                        <a href='@Url.Action("Refinance", "LoanRate")' class="btn">Refinance</a>
+                        <p>
+                            There are so many benefits to refinancing your current mortgage <a href='@Url.Action("RefinanceYourMortgage", "Aboutus")'>
+                                check out this article
+                            </a> if you’re looking for an
+                            introduction as to why
+                            .  It came come with a feeling of burden or
+                            time to figure out all the details, though.  Did you know that in today’s market, there is NO NEED to go to a
+                            bank to refinance your current loan?  Innovative companies are making it easier than ever to put money back in
+                            your pockets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="calculatorForm">
+                    <h4>Refinance Rate Detail</h4>
+                    <div class="formBase">
+                        <form class="row" action="#">
+                            <input id="loanpurpose" name="loanpurpose" type="hidden" value="1" />
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 zipCode">
+                                <label for="">Zip Code</label>
+                                <input type="text" class="form-control" id="PurZipCode" placeholder="Zip Code" />
+
+                                <span style="color:red" id="errorPurZipCode"></span>
+
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 cScore">
+                                <label for="">Credit Score Range</label>
+                                <select id="PurCreditScore" class="form-control">
+                                    <option selected>Select credit Score</option>
+                                    <option value="760">Excellent (≥ 760)</option>
+                                    <option value="740">Very good (740-759)</option>
+                                    <option value="720">Good (720-739)</option>
+                                    <option value="700">Decent (700-719)</option>
+                                    <option value="680">Average (680-699)</option>
+                                    <option value="660">Fair (660-679)</option>
+                                    <option value="620">Low (620-659)</option>
+                                    <option value="580">Very Low (580-619)</option>
+                                    <option value="400">Poor (< 580)</option>
+                                </select>
+                                <span style="color:red" id="errorPurCreditScore"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 pPrice">
+                                <label for="">Home value</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Home Value" id="homeValue" />
+                                </div>
+                                <span style="color:red" id="errorHomeValue"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 dPayment">
+                                <label for="">Mortgage balance</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Mortgage Balance" id="purchasePrice" />
+                                </div>
+                                <span style="color:red" id="errorpurchasePrice"></span>
+
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 pType">
+                                <label for="">Property Type</label>
+                                <select id="propertyType" class="form-control">
+                                    <option selected>Select property type</option>
+                                    <option value="0">Single Family</option>
+                                    <option value="15">Townhouse</option>
+                                    <option value="1,2,3">2 to 4 Units</option>
+                                    <option value="20">Condo</option>
+                                </select>
+                                <span style="color:red" id="errorPropertyType"></span>
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 pUsage">
+                                <label for="">Property Usage</label>
+                                <select id="propertyUsage" class="form-control">
+                                    <option selected>Select property usage</option>
+                                    <option value="0">Primary residence</option>
+                                    <option value="1">Investment</option>
+                                    <option value="2">Second Home</option>
+                                </select>
+                                <span style="color:red" id="errorPropertyUsage"></span>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3">
+                                <div class="text-center form-btn">
+                                    <a href="javascript:void(0);" id="getResult" class="btn m-0">Get Result</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="resultTab">
+                    <div id="tablistHide">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="one" aria-controls="one" aria-selected="true">All <span class="nTag" id="setCount"></span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="two-tab" aria-controls="two" aria-selected="false">30-Year Fixed</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="three-tab" aria-controls="three" aria-selected="false">20-Year Fixed</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="forth-tab" aria-controls="forth" aria-selected="false">15-Year Fixed</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="cover-spin"></div>
+                    @*<div class="resultTabBtn" id="Showall">*@
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="one-tab">
+                            <div class="lenderDetails" id="rateDetails">
+                            </div>
+                        </div>
+                        @*</div>*@
+                    </div>
+
+                    <h2 style="text-align:center">
+                        <span style="color:red" id="recordnotFound"></span>
+                    </h2>
+                    <div class="d-flex justify-content-between resultTabBtn">
+
+                        <p class="m-0"> <a href='@Url.Action("RefinanceCalculator", "Calculator")' class="btn c-bg-btn">Loan Comparison Calculator.</a></p>
+                        <div class="resultTabBtn" id="Showall">
+                            <a href='@Url.Action("Started", "Account")' class="btn c-bg-btn">Personalize your rates</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="mcContent">
+                    <h5>Browse Rates</h5>
+                    <p>
+                        Once you determine refinancing would be a smart financial move for you, top mortgage professionals offer simple ways to
+                        browse and discover just how much you can save.  Check out this personalized loan calculator that will help give you an easy
+                        overview of how much you can save when refinancing.
+                    </p>
+                    <h5>How Do I Know What’s Right For Me?</h5>
+                    <p>
+                        Working with a certified loan advisor is always your best bet when looking to refinance.  If you’ve checked out our loan
+                        calculator but are still curious about what your options are, a loan advisor will work with you to create a personalized
+                        plan of action to help you achieve the goal you’re looking for.  That may be to just lower your interest rate, take cash
+                        out against your house, reduce your loan terms – there’s a solution for it all and a tailor made solution is always the
+                        way to go.
+                    </p>
+                    <h5>Shop Around</h5>
+                    <p>
+                        No matter what your refinance goals may be, it’s imperative that you shop around for the best rates.  It can seem simple
+                        to go to your local established bank to refinance your current loan, but many times there are considerably better terms
+                        available elsewhere.  That is where leading mortgage broker, Hypotec, stands out.  Hypotec has partnered with 100s of
+                        different lenders which allows specialized loan advisors to truly do the shopping around for you.  No more spending
+                        countless hours on the phone and filling out forms with a variety of different lender providers.  Let an experienced
+                        mortgage broker handle that hassle for you.
+                    </p>
+                    <p>
+                        You know your “why” to refinance, you’ve done some number crunching on your end to confirm it’s a
+                        no brainer to move forward, now it’s as simple as getting in touch with a loan advisor to finalize your customized solution.
+                        Don’t fall for the easy way out – let Hypotec be your partner in finding the best possible solution to help your financial
+                        situation.
+                    </p>
+                    <div class="col-md-4 p-0">
+                        <div class="text-center form-btn">
+                            <a href='@Url.Action("AgentSlotBooking", "FindAndExpert")' id="getResult" class="btn m-0">Schedule A Call Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

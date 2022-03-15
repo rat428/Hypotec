@@ -1,0 +1,19 @@
+﻿@model List<Hypotec.Web.Models.AdvisorModel>
+
+<div class="row">
+    @foreach (var advisor in Model)
+    {
+        <div class="col-md-3">
+            <div class="agentCard agentCardCareer text-center">
+                <img src="@advisor.ImagePath" class="img-fluid" alt="">
+                <h4>@advisor.Name</h4>
+                <p>@advisor.Email</p>
+                <small class="stateadd">@advisor.Address</small>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class=""> </small>
+                    @Html.ActionLink("Contact Agent", "AgentProfile", new { id = advisor.Name })
+                </div>
+            </div>
+        </div>
+    }
+</div>

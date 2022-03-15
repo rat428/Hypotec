@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewData["Title"] = "Advisor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- start start page HTML code -->
+<section class="findAnExpert-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="findAnEximg">
+                    <img src="~/images/h-map.PNG" class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="all-caption findAnEx-text">
+                    <h2>Find An <span class="blue-text">Expert</span></h2>
+                    <p>The Key To Finding The RIGHT Home Is Working With The RIGHT Loan Officer</p>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="mortgageCalculator">
+                    <h4>Start Searching Now</h4>
+                    <div class="formBase">
+                        <form class="row lign-items-center" action="#">
+                            <div class="form-group col-5 mb-3">
+                                <label for="">Search Area</label>
+                                <div class="input-group">
+
+                                    <input type="text" onkeypress="myFunction()" class="form-control" id="serachAddress" />
+                                </div>
+                            </div>
+                            @*<div class="form-group col mb-3">
+                                    <label for="">Search Radius</label>
+                                    <select class="form-control" id="radius">
+                                        <option value="10">10 mi</option>
+                                        <option value="25">25 mi</option>
+                                        <option value="50">50 mi</option>
+                                        <option value="100">100 mi</option>
+                                        <option value="200">200 mi</option>
+                                        <option value="500" selected>500 mi</option>
+                                    </select>
+                                </div>*@
+                            <div class="form-group col mb-3">
+                                <label for="">Results</label>
+                                <select class="form-control" id="result">
+                                    <option value="24">25</option>
+                                    <option value="50">50</option>
+                                    <option value="75">75</option>
+                                    <option value="100" selected>100</option>
+
+                                </select>
+                            </div>
+                            <div class="col">
+                                <div class="text-center form-btn pt-4">
+                                    <input type="hidden" id="hdnlongitude" value="" />
+                                    <input type="hidden" id="hdnlatitude" value="" />
+                                    <input type="hidden" id="hdnShortStateName" value="" />
+                                    <input type="hidden" id="hdnLongStateName" value="" />
+                                    <input type="hidden" id="hdnFullAddress" value="" />
+                                    <input type="hidden" id="hdnCityName" value="" />
+                                    <input type="hidden" id="hdnPostalCode" value="" />
+                                    <input type="hidden" id="hdnContryCode" value="" />
+                                    <input type="hidden" id="hdnFlag" value="" />
+                                    <input type="button" onclick="getAddress();" class="btn w-100" value="Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="searchResult" id="divAdvisorContent">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end start page HTML code -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('serachAddress'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+            for (var i = 0; i < place.address_components.length; i++) {
+                for (var j = 0; j < place.address_components[i].types.length; j++) {
+
+                    //if (place.address_components[i].types[j] == "postal_code") {
+                    //    $('#zipcode').val(place.address_components[i].long_name);
+                    //}
+                    if (place.address_components[i].types[j] == "administrative_area_level_1") {
+                        //alert(place.address_components[i].long_name);
+                        //alert(place.address_components[i].short_name);
+                        $('#hdnShortStateName').val(place.address_components[i].short_name);
+                        $('#hdnLongStateName').val(place.address_components[i].long_name);
+                        $('#hdnFlag').val("true");
+                        //$('#State').val(place.address_components[i].long_name);
+                    }
+                    //if (place.address_components[i].types[j] === "locality") {
+                    //    $('#City').val(place.address_components[i].long_name);
+                    //}
+                }
+            }
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            //document.getElementById('hdnlongitude').value = place.geometry.location.lat();
+            //document.getElementById('hdnlongitude').value = place.geometry.location.lng();
+            $('#hdnlatitude').val(place.geometry.location.lat());
+            $('#hdnlongitude').val(place.geometry.location.lng());
+            //alert('latlong');
+            //alert(place.geometry.location.lat());
+            //alert(place.geometry.location.lng());
+        });
+    });
+    function myFunction() {
+        $('#hdnlatitude').val(null);
+        $('#hdnlongitude').val(null);
+    }
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/geocode/json?place_id=ChIJd8BlQ2BZwokRAFUEcm_qrcA&key=YAIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+
+<script type="text/javascript">
+    function getAddress() {
+        if ($('#hdnFlag').val() == "") {
+            getAddressInfoByZip($('#serachAddress').val())
+        }
+        else {
+            $('#hdnFlag').val("");
+            SerachAdvisor();
+        }
+
+    }
+    function getAddressInfoByZip(zip) {
+        if (zip.length >= 5) {
+            var addr = {};
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': zip }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+           
+                    if (results.length >= 1) {
+       
+                        for (i = 0; i < results[0].address_components.length; ++i) {
+                            for (j = 0; j < results[0].address_components[i].types.length; ++j) {
+                                if (results[0].address_components[i].types[j] == "country") {
+                                    $('#hdnContryCode').val(results[0].address_components[i].long_name);
+                                }
+                                if (results[0].address_components[i].types[j] == "postal_code") {
+                                    $('#hdnPostalCode').val(results[0].address_components[i].long_name);
+
+                                }
+                                if (results[0].address_components[i].types[j] == "locality") {
+                                    $('#hdnCityName').val(results[0].address_components[i].long_name);
+
+                                }
+                                if (results[0].address_components[i].types[j] == "sublocality") {
+
+                                    $('#hdnFullAddress').val(results[0].address_components[i].long_name);
+                                }
+                                if (results[0].address_components[i].types[j] == "administrative_area_level_1") {
+                                    $('#hdnShortStateName').val(results[0].address_components[i].short_name);
+
+                                    $('#hdnLongStateName').val(results[0].address_components[i].long_name);
+
+                                }
+
+                            }
+                        }
+                        SerachAdvisor();
+                    }
+                 
+                }
+                else {
+                    $("#hdnShortStateName").val("");
+                    $("#hdnLongStateName").val("");
+                    $("#hdnPostalCode").val("");
+                    $("#hdnFullAddress").val();
+                    $("#hdnContryCode").val();
+                    SerachAdvisor();
+                }
+
+            });
+        }
+    }
+
+    function SerachAdvisor() {
+        var serachAdvisor = $("#hdnShortStateName").val() + "," + $("#hdnLongStateName").val() + "," + $("#hdnPostalCode").val() + "," + $("#hdnFullAddress").val() + "," + $("#hdnContryCode").val() + "," + $("#serachAddress").val();
+ 
+
+        var longitude = $("#hdnlongitude").val();
+        var latitude = $("#hdnlatitude").val();
+        //var shortStateName = $("#hdnShortStateName").val();
+        var radius = $("#radius").val();
+        var result = $("#result").val();
+        //$("#divLoader").show();
+        jQuery.ajax({
+            type: 'POST',
+            async: true,
+            url: '/Advisor/AdvisorList',
+            data: {
+                serachAdvisor: serachAdvisor,
+                longitude: longitude,
+                latitude: latitude,
+                radius: radius,
+                recordCount: result
+            },
+            success: function (data) {
+                if (data.length == 0) {
+                    $('#divAdvisorContent').html('');
+                }
+                else {
+                    $('#divAdvisorContent').html(data);
+                }
+            }
+        });
+    }
+</script>

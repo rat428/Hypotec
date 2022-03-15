@@ -1,0 +1,43 @@
+﻿@model List<Hypotec.Web.Models.ResourceModel>
+
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-12 col-md-6 col-xl-4 col-lg-4" id="divNone">
+            <div class="reBox">
+                <img src="@item.ImagePath" class="img-fluid" alt="" />
+                <div class="reBoxContent">
+                    <h3>@Html.Raw(@item.Header)</h3>
+                    <p>@Html.Raw(@item.Description)  </p>
+                    @if (item.Id == "1")
+                    {
+                        <a href='@Url.Action("BuyersClosingCosts", "Aboutus")' class="btn">Read More...</a>
+                    }
+                    else if (item.Id == "2")
+                    {
+                        <a href='@Url.Action("SellingYourHome", "Aboutus")' class="btn">Read More...</a>
+                    }
+                    else if (item.Id == "3")
+                    {
+                        <a href='@Url.Action("HowToLandADeal", "Aboutus")' class="btn">Read More...</a>
+                    }
+                    else if (item.Id == "4")
+                    {
+                        <a href='@Url.Action("PreApprovedForAMortgage", "Aboutus")' class="btn">Read More...</a>
+                    }
+                    else if (item.Id == "5")
+                    {
+                        <a href='@Url.Action("RefinanceYourMortgage", "Aboutus")' class="btn">Read More...</a>
+                    }
+                    else
+                    {
+                        <a href='@Url.Action("Article", "Resource",new { id = @item.Id})' class="btn">Read More...</a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

@@ -1,0 +1,256 @@
+﻿
+@{
+    ViewData["Title"] = "StartPurchase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="careerDetailsPage">
+    @*<div class="img-one">
+        <img src="~/images/dots.png" class="img-fluid" alt="">
+    </div>*@
+    <div class="container-fluid">
+        <div class="row">
+            @*<div class="col-md-12">
+                    <div class="gobackbtn">
+                        <a href="#"><i class="fas fa-angle-left"></i> Go Back</a>
+                    </div>
+                </div>*@
+            <div class="col-md-12" id="divpagefirst">
+                <div class="questionlist">
+                    <div class="questionText">
+                        <h2>Where in the process <span class="blue-text">are you?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    I'm just researching
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    I'm going to open houses
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    I'm making offers
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+                                <label class="form-check-label" for="exampleRadios4">
+                                    I have signed a purchase contract
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionlist" id="div1">
+                    <div class="questionText mt-3">
+                        <h2>You're in the right spot. <span class="blue-text">How can we help?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios" id="exampleRadios5" value="option5">
+                                <label class="form-check-label" for="exampleRadios5">
+                                    Get a Pre-approval Letter
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios" id="exampleRadios6" value="option6">
+                                <label class="form-check-label" for="exampleRadios6">
+                                    See how much I can afford
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios" id="exampleRadios7" value="option7">
+                                <label class="form-check-label" for="exampleRadios7">
+                                    Estimate a home's cost
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios" id="exampleRadios8" value="option8">
+                                <label class="form-check-label" for="exampleRadios8">
+                                    Find a real estate agent
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionlist" id="div2">
+                    <div class="questionText mt-3">
+                        <h2>When do you plan on <span class="blue-text">purchasing your property?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios1" id="exampleRadios9" value="option9">
+                                <label class="form-check-label1" for="exampleRadios9">
+                                    0–3 months
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios1" id="exampleRadios10" value="option10">
+                                <label class="form-check-label1" for="exampleRadios10">
+                                    3–6 months
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios1" id="exampleRadios11" value="option11">
+                                <label class="form-check-label1" for="exampleRadios11">
+                                    6+ months
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="sexampleRadios1" id="exampleRadios12" value="option12">
+                                <label class="form-check-label1" for="exampleRadios12">
+                                    Not sure
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionlist" id="div3">
+                    <div class="questionText mt-3">
+                        <h2>Where are you looking?</h2>
+                        <input type="text" class="form-control" id="zipcode">
+                    </div>
+                </div>
+                <div class="questionlist" id="div4">
+                    <div class="questionText mt-3">
+                        <h2>Great! What is the address of the new property?</h2>
+                        <input type="text" class="form-control" id="propaddress">
+                    </div>
+                </div>
+                <div class="wzrdbtn">
+                    <button class="btn" id="btnNext" onclick="NextPage();" disabled>Next</button>
+                </div>
+            </div>
+            <div class="col-md-12" id="divpagesecond">
+                <div class="questionlist">
+                    <div class="questionText">
+                        <h2>What type of home are you most  <span class="blue-text">interested in?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios2" id="exampleRadios13" value="option13">
+                                <label class="form-check-label2" for="exampleRadios13">
+                                    Primary residence
+                                </label>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios2" id="exampleRadios14" value="option14">
+                                <label class="form-check-label2" for="exampleRadios14">
+                                    Second home
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios2" id="exampleRadios15" value="option15">
+                                <label class="form-check-label2" for="exampleRadios15">
+                                    Investment
+                                </label>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="questionlist">
+                    <div class="questionText">
+                        <h2>What property type  <span class="blue-text">would this be?</span></h2>
+                    </div>
+                    <ul class="p-0 m-0">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios3" id="exampleRadios16" value="option16">
+                                <label class="form-check-label3" for="exampleRadios16">
+                                    Single Family
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios3" id="exampleRadios17" value="option17">
+                                <label class="form-check-label3" for="exampleRadios17">
+                                    Townhouse or Condo
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input1" type="radio" name="exampleRadios" id="exampleRadios18" value="option18">
+                                <label class="form-check-label" for="exampleRadios18">
+                                    2 to 4 units
+                                </label>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="wzrdbtn">
+                    <button class="btn" id="btnPrevious" onclick="PreviousPage();">previous</button>
+                    <a type="button" href='@Url.Action("GetStarted", "Account")' class="btn" id="btnNextPage" disabled>
+                        Next
+                    </a>
+                    @*<button  class="btn" id="btnNextPage" onclick="NextPage1();" disabled>Next</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyD95mg60xSmPy1bY-CjxaOW12Vl6Pt_qSQ"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('zipcode'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            //document.getElementById('txtLatitude').value = place.geometry.location.lat();
+            //document.getElementById('txtLongitude').value = place.geometry.location.lng();
+        });
+    });
+</script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('propaddress'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            //document.getElementById('txtLatitude').value = place.geometry.location.lat();
+            //document.getElementById('txtLongitude').value = place.geometry.location.lng();
+        });
+    });
+</script>
+

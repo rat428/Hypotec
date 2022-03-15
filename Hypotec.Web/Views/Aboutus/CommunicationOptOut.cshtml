@@ -1,0 +1,208 @@
+﻿@model Hypotec.Web.Models.CommunicationOptOutModel
+@{
+    ViewData["Title"] = "CommunicationOptOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- start contact us page HTML code -->
+<section class="comm-opt-out">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Communication-otp-out applied successfully .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong></strong>
+                <button type="button" class="close" data-dismiss="alert"></button>
+            </div>
+        }
+        <form class="row" id="savingform" method="post" asp-action="CommunicationOptOut" asp-controller="Aboutus">
+            <div class="col-md-12">
+
+                <div class="all-caption comm-text">
+                    <h2>Communication <span class="blue-text">Opt-Out</span></h2>
+                    <p>
+                        We Want To Stay In Touch, But Only In Ways You Find Helpful. If You No Longer Want To Receive Marketing Or Promotional Information From Quicken
+                        Loans, Choose Which Communication Methods You’d Like To Opt Out Of Below, Then Enter Your Information.
+                    </p>
+                    <p>Remember, If You Opt Out, We Won’t Be Able To Let You Know About Special Discounts Or Offers On Products And Services That Might Benefit You.</p>
+                    <p>If The Information You Provide Doesn’t Match The Information In Our System, You May Still Receive Promotional Information From Us.</p>
+                </div>
+
+                <div class="checklistcontent">
+                    <ul class="p-0">
+                        <li>
+                            <div class="accordion" id="accordionExample">
+
+                                <div class="">
+                                    <div class="" id="headingFour">
+                                        <div class="form-group form-check" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                            <input type="checkbox" class="form-check-input" value="oneCheck" id="one" onchange="getValueOne(this.value)" name="one">
+                                            <label class="form-check-label" for="one">I would like to opt out of promotional mail.</label>
+                                        </div>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+                                        <div class="card-body px-0 pt-0">
+                                            <div class="mb-3">
+                                                <label asp-for="Address" class="control-label"></label>
+                                                <input asp-for="Address" id="address" class="form-control" />
+                                                <span asp-validation-for="Address" id="erroraddress" class="text-danger"></span>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label asp-for="City" class="control-label"></label>
+                                                <input asp-for="City" id="city" class="form-control" />
+                                                <span asp-validation-for="City" id="errorcity" class="text-danger"></span>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email">State</label>
+                                                <select name="State" class="form-control" id="State">
+                                                    <option value="">---</option>
+                                                    <option value="Select One">Select One</option>
+                                                    <option value="Alabama">Alabama</option>
+                                                    <option value="Alaska">Alaska</option>
+                                                    <option value="Arizona">Arizona</option>
+                                                    <option value="Arkansas">Arkansas</option>
+                                                    <option value="California">California</option>
+                                                    <option value="Colorado">Colorado</option>
+                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="Delaware">Delaware</option>
+                                                    <option value="Washington DC">Washington DC</option>
+                                                    <option value="Florida">Florida</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Hawaii">Hawaii</option>
+                                                    <option value="Idaho">Idaho</option>
+                                                    <option value="Illinois">Illinois</option>
+                                                    <option value="Indiana">Indiana</option>
+                                                    <option value="Iowa">Iowa</option>
+                                                    <option value="Kansas">Kansas</option>
+                                                    <option value="Kentucky">Kentucky</option>
+                                                    <option value="Louisiana">Louisiana</option>
+                                                    <option value="Maine">Maine</option>
+                                                    <option value="Maryland">Maryland</option>
+                                                    <option value="Massachusetts">Massachusetts</option>
+                                                    <option value="Michigan">Michigan</option>
+                                                    <option value="Minnesota">Minnesota</option>
+                                                    <option value="Mississippi">Mississippi</option>
+                                                    <option value="Missouri">Missouri</option>
+                                                    <option value="Montana">Montana</option>
+                                                    <option value="Nebraska">Nebraska</option>
+                                                    <option value="Nevada">Nevada</option>
+                                                    <option value="New Hampshire">New Hampshire</option>
+                                                    <option value="New Jersey">New Jersey</option>
+                                                    <option value="New Mexico">New Mexico</option>
+                                                    <option value="New York">New York</option>
+                                                    <option value="North Carolina">North Carolina</option>
+                                                    <option value="North Dakota">North Dakota</option>
+                                                    <option value="Ohio">Ohio</option>
+                                                    <option value="Oklahoma">Oklahoma</option>
+                                                    <option value="Oregon">Oregon</option>
+                                                    <option value="Pennslyvania">Pennslyvania</option>
+                                                    <option value="Rhode Island">Rhode Island</option>
+                                                    <option value="South Carolina">South Carolina</option>
+                                                    <option value="South Dakota">South Dakota</option>
+                                                    <option value="Tennessee">Tennessee</option>
+                                                    <option value="Texas">Texas</option>
+                                                    <option value="Utah">Utah</option>
+                                                    <option value="Vermont">Vermont</option>
+                                                    <option value="Virginia">Virginia</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="West Virginia">West Virginia</option>
+                                                    <option value="Wisconsin">Wisconsin</option>
+                                                    <option value="Wyoming">Wyoming</option>
+                                                </select>
+                                                <span asp-validation-for="State" id="errorstate" class="text-danger"></span>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label asp-for="ZipCode" class="control-label"></label>
+                                                <input asp-for="ZipCode" id="zipcode" class="form-control" />
+                                                <span asp-validation-for="ZipCode" id="errorzipcode" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="" id="headingTwo">
+                                        <div class="form-group form-check" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            <input type="checkbox" class="form-check-input" id="two"  asp-for="two">
+                                            <label class="form-check-label" for="two">I would like to opt out of promotional phone calls.</label>
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                                        <div class="card-body px-0 pt-0">
+                                            <label class="control-label">Phone Number </label>
+                                            <input asp-for="PhoneNumberCall" id="phonenumbercall" class="form-control" />
+                                            <span asp-validation-for="PhoneNumberCall" id="errorphonenumbercall" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="" id="headingThree">
+                                        <div class="form-group form-check" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            <input type="checkbox" class="form-check-input" id="three" asp-for="three">
+                                            <label class="form-check-label" for="three">I would like to opt out of promotional text messages.</label>
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                                        <div class="card-body px-0 pt-0">
+                                            <label class="control-label">Phone Number</label>
+                                            <input asp-for="PhoneNumberText" id="phonenumbertext" class="form-control" />
+                                            <span asp-validation-for="PhoneNumberText" id="errorphonenumbertext" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="" id="headingZero">
+                                        <div class="form-group form-check" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <input type="checkbox" class="form-check-input" id="four" asp-for="four" >
+                                            <label class="form-check-label" for="four">I would like to opt out of promotional email communications.</label>
+                                        </div>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingZero">
+                                        <div class="card-body px-0 pt-0">
+                                            <label class="control-label">Email Address</label>
+                                            <input asp-for="EmailAddress" id="emailaddress" class="form-control" />
+                                            <span asp-validation-for="EmailAddress" id="erroremailaddress" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group">
+                                <label for="slct">Please tell us why you’re opting out.</label>
+                                <select name="Slct" class="form-control" id="Slct">
+                                    <option value="">---</option>
+                                    <option value="Mistakenly signed up">Mistakenly signed up</option>
+                                    <option value="Too many messages">Too many messages</option>
+                                    <option value="I have another lender">I have another lender</option>
+                                    <option value="I changed my mind">I changed my mind</option>
+                                    <option value="Other/Unknown">Other/Unknown</option>
+                                </select>
+                                <span id="errorSlct" class="text-danger"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-12">
+                                <div class="register-form-btn">
+                                    <input type="submit" class="btn" onclick="javascript:return validateOPTOUTVal();" value="Opt Out Now">
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <p class="m-0 pt-3">If You Would Feel More Comfortable Opting Out Via Phone, Please Call Us At <a href="tel:+844-497-6832"> 844.497.6832 </a></p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+<!-- end contact us page HTML code -->

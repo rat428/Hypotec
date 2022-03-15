@@ -1,0 +1,372 @@
+﻿@model Hypotec.Web.Models.ReviewModel
+
+@{
+    ViewData["Title"] = "ReviewUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="reviewDetailsPage">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Job applied successfully .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong> Job applied failed .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption comm-text">
+                    <h2>Review <span class="blue-text">Us</span></h2>
+                    <p>We hope you enjoyed working with Hypotec!  Your feedback is important to us.  Please let us know how you enjoyed working with your loan advisor and the Hypotec team.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="gbbox text-center">
+                                <div class="">
+                                    <img src="~/images/happiness.png" class="img-fluid" alt="" />
+                                </div>
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#goodexp" class="btn">I had good experience</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="gbbox text-center">
+                                <div class="">
+                                    <img src="~/images/sweat.png" class="img-fluid" alt="" />
+                                </div>
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#badexp" class="btn">I had bad experience</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="helpusText">
+                                <i><p>Help Us. Help Others. You’re Invited To Review:</p></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="applyModal">
+    <div class="modal fade" id="contact" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header diffheading d-block text-center">
+                    <h5 class="modal-title" id="contactLabel">
+                        We strive for 100% customer satisfaction. If we fell short, please tell us more so we can address your concerns.
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" id="savingform" method="post" enctype="multipart/form-data" asp-action="ReviewUsContactMessage" asp-controller="Aboutus">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input asp-for="Name" id="reviewContactName" class="form-control" />
+                                <span asp-validation-for="Name" id="errorreviewContactName" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Phone Number</label>
+                                <input asp-for="PhoneNumber" id="reviewPhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" id="errorreviewPhoneNumber" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input asp-for="Email" id="reviewEmail" class="form-control" />
+                                <span asp-validation-for="Email" id="errorreviewEmail" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Message</label>
+                                <textarea asp-for="Message" class="form-control" id="reviewMessage" cols="30" rows="10"></textarea>
+                                <span asp-validation-for="Message" id="errorreviewMessage" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="register-form-btn">
+                                <button type="submit" class="btn" onclick="javascript:return ValidateContactReview();">Send Message</button>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=""></div>
+                        </div>
+                        @*<div class="col-md-12">
+                                <div class="modbottext">
+                                    <p>If you do not wish to address your concerns here and prefer to post a review, <a href="javascript:void(0);" class="blue-text">click here.</a></p>
+                                </div>
+                            </div>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyModal">
+    <div class="modal fade" id="badexp" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="badexpLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header diffheading d-block text-center">
+                    <h5 class="modal-title" id="badexpLabel">
+                        We strive for 100% customer satisfaction. If we fell short,
+                        please tell us more so we can address your concerns.
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" id="savingform" method="post" enctype="multipart/form-data" asp-action="ReviewUsMessage" asp-controller="Aboutus">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input asp-for="Name" id="reviewContactName" class="form-control" />
+                                <span asp-validation-for="Name" id="errorreviewContactName" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Phone Number</label>
+                                <input asp-for="PhoneNumber" id="reviewPhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" id="errorreviewPhoneNumber" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input asp-for="Email" id="reviewEmail" class="form-control" />
+                                <span asp-validation-for="Email" id="errorreviewEmail" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Message</label>
+                                <textarea asp-for="Message" class="form-control" id="reviewMessage" cols="30" rows="10"></textarea>
+                                <span asp-validation-for="Message" id="errorreviewMessage" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="register-form-btn">
+                                <button type="submit" class="btn" onclick="javascript:return ValidateContactReview();">Send Message</button>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=""></div>
+                        </div>
+                        @*<div class="col-md-12">
+                                <div class="modbottext">
+                                    <p>If you do not wish to address your concerns here and prefer to post a review, <a href="javascript:void(0);" class="blue-text">click here.</a></p>
+                                </div>
+                            </div>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyModal">
+    <div class="modal fade" id="goodexp" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="goodexpLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header diffheading d-block text-center">
+                    <h5 class="modal-title" id="goodexpLabel">
+                        Thank you! We need your help. Would you share your
+                        experience on one of these sites?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="reviewimg">
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#google">
+                                    <img src="~/images/google.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-xl-0 mt-lg-0">
+                            <div class="reviewimg">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#facebook">
+                                    <img src="~/images/facebook.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <div class="reviewimg">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#zillow">
+                                    <img src="~/images/zillow.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <div class="reviewimg">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#yelp">
+                                    <img src="~/images/yelp.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="modbottext">
+                                <p>If you have concerns you wish to address in private, please get in touch. <a href="javascript:void(0);" data-toggle="modal" data-target="#contact" data-dismiss="modal" class="blue-text">Contact Us</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyGoogle en">
+    <div class="modal fade" id="google" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="goodeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="title google" id="label-modal-link-8e1bb792-b9da-4b0b-b0bd-d17bc510d1ee">Google</h3>
+
+                    <button style="" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="guide guide-review google">
+                        <p>If you don’t already have a Google account, you should—use it to read and post reviews, as well as access other Google products like Gmail.</p><p>From our Google listing:</p><ul><li class=""><p>If prompted, sign up or log in</p></li><li class=""><p>Leave your rating and feedback</p></li><li class="">Click <strong>post</strong> to share with others.</li></ul>
+
+                    </div>
+                    <p style="font-size:small;text-align:center;color:#aaa;"><em>Note: This website is not affiliated with or endorsed by Google.</em></p>
+
+                    @*<div class="col-md-12">
+                            <div class="modbottext">
+                                <p>If you do not wish to address your concerns here and prefer to post a review, <a href="javascript:void(0);" class="blue-text">click here.</a></p>
+                            </div>
+                        </div>*@
+
+                </div>
+                <div class="modal-footer">
+                    <div class="align-contents-center">
+                        <a class="link google" style="padding: 7px" onclick="javascript:window.open('http://search.google.com/local/writereview?placeid=ChIJTwPazXKy2YgRXBPloTSlYt8'); javascript:window.location.href = window.location.href.split('#')[0] + '?alert=on_submit_review_body&amp;outcome=link_outbound&amp;outcome_detail=google'; return false;" target="_blank" data-track="yes" data-track-name="funnel_click" data-track-key="google" data-track-text="Review us on Google" data-track-destination="outbound" data-track-context="interstitial" data-track-sort-order="0" href="http://search.google.com/local/writereview?placeid=ChIJTwPazXKy2YgRXBPloTSlYt8">Review us on Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyGoogle en">
+    <div class="modal fade" id="zillow" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="goodeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="title zillow" id="label-modal-link-8e1bb792-b9da-4b0b-b0bd-d17bc510d1ee">Zillow</h3>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="guide guide-review zillow">
+
+
+                        <p>Zillow provides tons of data to buyers and sellers of real estate. The site also collects ratings and reviews of real estate agents.</p><p>From our profile:</p><ul><li class="">Click “Write review”</li><li class="">Give us a star rating and provide any details to substantiate it</li><li class="">You’ll need to login to Zillow to complete the process but it’s super easy: just provide an email address or connect with Facebook or Google</li></ul>
+
+                    </div>
+                    <p style="font-size:small;text-align:center;color:#aaa;"><em>Note: This website is not affiliated with or endorsed by Zillow.</em></p>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="align-contents-center">
+                        <a class="link zillow" style="padding: 7px" onclick="javascript:window.open('https://www.zillow.com/lender-profile/Hypotec/'); javascript:window.location.href = window.location.href.split('#')[0] + '?alert=on_submit_review_body&amp;outcome=link_outbound&amp;outcome_detail=zillow'; return false;" target="_blank" data-track="yes" data-track-name="funnel_click" data-track-key="zillow" data-track-text="Review us on Zillow" data-track-destination="outbound" data-track-context="interstitial" data-track-sort-order="2" href="https://www.zillow.com/lender-profile/Hypotec/">Review us on Zillow</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyGoogle en">
+    <div class="modal fade" id="facebook" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="goodeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="title facebook" id="label-modal-link-8e1bb792-b9da-4b0b-b0bd-d17bc510d1ee">Google</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="guide guide-review facebook">
+                        <p>Facebook lets us stay connected with our customers, fans and friends—and now lets you review businesses.</p><p>From our Facebook page:</p><ul><li class="">Log in or sign up if you haven’t already</li><li class="">Find the “Recommendations” widget in the body of the page and recommend us</li><li class="">Leave additional feedback at the prompt</li><li class="">“Like” our page if you want to stay connected with us</li></ul>
+                    </div>
+                    <p style="font-size:small;text-align:center;color:#aaa;"><em>Note: This website is not affiliated with or endorsed by Facebook.</em></p>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="align-contents-center">
+                        <a class="link facebook" style="padding: 7px" onclick="javascript:window.open('https://www.facebook.com/pages/category/Loan-Service/Hypotec-350362082083412/'); javascript:window.location.href = window.location.href.split('#')[0] + '?alert=on_submit_review_body&amp;outcome=link_outbound&amp;outcome_detail=facebook'; return false;" target="_blank" data-track="yes" data-track-name="funnel_click" data-track-key="facebook" data-track-text="Review us on Facebook" data-track-destination="outbound" data-track-context="interstitial" data-track-sort-order="3" href="https://www.facebook.com/pages/category/Loan-Service/Hypotec-350362082083412/">Review us on Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyGoogle en">
+    <div class="modal fade" id="yelp" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="goodeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header review">
+                    <h3 class="title yelp" id="label-modal-link-8e1bb792-b9da-4b0b-b0bd-d17bc510d1ee">Google</h3>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="guide guide-review yelp">
+
+
+                        <p><strong>Yelp filters reviews. Unless you already use Yelp or plan to in the future, please <a href="#modal-reviews" data-toggle="modal" data-dismiss="modal">choose another site</a></strong>. If you do use Yelp, you can post a review in one step. You can also sign up with your Facebook account.</p><p>On our listing, just:</p><ul><li class="">Click “Write a Review”</li><li>Rate your experience with us, leaving as much descriptive feedback as possible to help us as well as other potential customers</li><li>Click “Signup and Post” to complete the process</li></ul>
+
+                    </div>
+                    <p style="font-size:small;text-align:center;color:#aaa;"><em>Note: This website is not affiliated with or endorsed by Yelp.</em></p>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="align-contents-center">
+                        <a class="link yelp" style="padding: 7px" onclick="javascript:window.open('http://www.yelp.com/biz/1zPxs65lG5tAnfO09hoURA'); javascript:window.location.href = window.location.href.split('#')[0] + '?alert=on_submit_review_body&amp;outcome=link_outbound&amp;outcome_detail=yelp'; return false;" target="_blank" data-track="yes" data-track-name="funnel_click" data-track-key="yelp" data-track-text="Review us on Yelp" data-track-destination="outbound" data-track-context="interstitial" data-track-sort-order="4" href="http://www.yelp.com/biz/1zPxs65lG5tAnfO09hoURA">Review us on Yelp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#goodexp').on('hidden.bs.modal', function () {
+        // Load up a new modal...
+        //$('#myModalNew').modal('show')
+    })
+</script>
+
+
+
+

@@ -1,0 +1,240 @@
+﻿
+@{
+    ViewData["Title"] = "RefinanceCalculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- start purchase page HTML code -->
+<section class="mortgageCalculatorPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="all-caption">
+                    <h2>Refinance <span class="blue-text">Calculator</span></h2>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="mortgageCalculator">
+                    <h4>Calculate your monthly payment and review your loan options.</h4>
+                    <div class="formBase">
+                        <form class="row lign-items-center" action="#">
+                            <div class="form-group col-12 col-sm-6 col-md-4 col-xl-3 col-lg-3 mb-3">
+                                <label for="" data-toggle="tooltip" data-placement="top">My goal is...</label>
+                                <select id="refinanceGoal" class="form-control">
+                                    <option selected>Select one</option>
+                                    <option value="LowerPayment">Lower my monthly payment</option>
+                                    <option value="ShortenTerm">Pay off my mortgage faster</option>
+                                    <option value="CashOut">Take cash out of my home</option>
+                                </select>
+                                <span style="color:red" id="errorRefinanceGoal"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3">
+                                <label for="" data-toggle="tooltip" data-placement="top">What Is Your Mortgage Balance?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Mortgage Balance" id="currentLoanBalanceAmount" />
+                                </div>
+                                <span style="color:red" id="errorCurrentLoanBalanceAmount"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3" id="divMonthlyPayment">
+                                <label for="" data-toggle="tooltip" data-placement="top">What is your current monthly payment?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Monthly Payment" id="monthlyPayment" />
+                                </div>
+                                <span style="color:red" id="errorMonthlyPayment"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3" id="divPitieRadios">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="Does your monthly payment include taxes and insurance?">
+                                    Does your monthly payment include taxes and insurance?
+                                </label>
+                                <div class="d-flex justify-content-start">
+                                    <div class="radioBoxDiv d-flex justify-content-center">
+                                        <div class="yesBox">
+                                            <input class="" type="radio" name="piti" onclick="handleClick(this);" value="Yes" />
+                                            <div class="onSelect">
+                                                <p class="m-0">Yes</p>
+                                            </div>
+                                        </div>
+                                        <div class="yesBox">
+                                            <input class="" type="radio" name="piti" onclick="handleClick(this);" value="No" checked />
+                                            <div class="onSelect">
+                                                <p class="m-0">No</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="divYearlyInsurance" class="form-group col-12 col-md-4 col-lg-6 mb-6">
+                                <div class="row">
+                                    <div class="form-group col-6 mb-3">
+                                        <label for="" data-toggle="tooltip" data-placement="top">Yearly Taxes?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0" placeholder="Yearly Taxes" id="yearlyTaxes" />
+                                        </div>
+                                        <span style="color:red" id="errorYearlyTaxes"></span>
+                                    </div>
+                                    <div class="form-group col-6 mb-3">
+                                        <label for="" data-toggle="tooltip" data-placement="top">Yearly Insurance?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0" id="yearlyInsurance" placeholder="Yearly Insurance" />
+                                        </div>
+                                        <span style="color:red" id="errorYearlyInsurance"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3" id="divRemainingTerm">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="What's the remaining term on your loan in years?">What's the remaining term on your loan in years?</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="remainingTerm" placeholder="Remaining Term" />
+                                </div>
+                                <span style="color:red" id="errorRemainingTerm"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3" id="divCashOut">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="How much cash do you want to take out?">How much cash do you want to take out?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Cash Out" id="cashOut" />
+                                </div>
+                                <span style="color:red" id="errorCashOut"></span>
+                            </div>
+
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="Approximately What Is Your Home Worth Today?">Approximately What Is Your Home Worth Today?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text border-right-0 bg-transparent"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control border-left-0" placeholder="Home Value" id="homeValue" />
+                                </div>
+                                <span style="color:red" id="errorHomeValue"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="Are You A Veteran Or Currently Serving In The Military?">Are You A Veteran Or Currently Serving In The Military?</label>
+                                <div class="d-flex justify-content-start">
+                                    <div class="radioBoxDiv d-flex justify-content-center">
+                                        <div class="yesBox">
+                                            <input class="" type="radio" name="exampleRadios" id="exampleRadios1" value="Yes"  />
+                                            <div class="onSelect">
+                                                <p class="m-0">Yes</p>
+                                            </div>
+                                        </div>
+                                        <div class="yesBox">
+                                            <input class="" type="radio" name="exampleRadios" id="exampleRadios1" value="Yes" checked/>
+                                            <div class="onSelect">
+                                                <p class="m-0">No</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="What Is Your Home's ZIP Code?">What Is Your Home's ZIP Code?</label>
+                                <input type="number" class="form-control" placeholder="Zip Code" id="zipCode" />
+                                <span style="color:red" id="errorZipCode"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-4 col-lg-3 mb-3">
+                                <label for="" data-toggle="tooltip" data-placement="top" title="How Would You Rate Your Credit?">How Would You Rate Your Credit?</label>
+                                <select class="form-control" id="fico">
+                                    <option selected>Select credit Score</option>
+                                    <option value="720">Excellent (720 or above)</option>
+                                    <option value="660">Good (660-719)</option>                                 
+                                    <option value="680">Average (620-659)</option>
+                                    <option value="660">Below Average (580-619)</option>
+                                    <option value="400">Poor (579 and below)</option>
+                                </select>
+                                <span style="color:red" id="errorFico"></span>
+                            </div>
+                            <div class="col-3">
+                                <div class="text-center form-btn    ">
+                                    <a href="javascript:void(0);" onclick="GetRefinanceResult();" class="btn">Calculate</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="cover-spin"></div>
+            <h3 style="text-align:left">
+                <span style="color:red" id="recordnotFound"></span>
+            </h3>
+            <div id="refinanceDetails">
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-between">
+                    <div class="twoButton" id="Showall">
+                        <a href='@Url.Action("Refinance", "LoanRate")' id="showAlls" class="btn c-round-btn">Show all rates</a>
+                        @*<a href="javascript:void(0);" class="btn c-bg-btn">Personalize your rates</a>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="mcContent">
+                    <h5>Does It Make Sense To Refinance?</h5>
+                    <p>
+                        Deciding if it makes sense to refinance starts with this question: What are your financial goals? Whether you want to lower your monthly payment,
+                        get a lower interest rate, shorten your term or do a cash-out refinance, our refinance calculator can help you determine if refinancing can help you meet your goals.
+                    </p>
+
+                    <h5>How Can I Get An Estimate Of My Rate?</h5>
+                    <p>
+                        Our refinance calculator uses today’s current rates. Once you enter your numbers and pressing “Calculate,” you’ll see a list of recommended loans, terms and rates.
+                        If you like what you see, you can get started by contacting a Home Loan Expert or applying online with Rocket Mortgage®.
+                    </p>
+
+                    <h5>How Can Refinancing Lower My Monthly Mortgage Payment?</h5>
+                    <p>To lower your monthly payment, look for a refinance option that helps you do one or more of the following:</p>
+
+                    <h5>How Can Refinancing Lower My Monthly Mortgage Payment?</h5>
+                    <p class="pb-2">To lower your monthly payment, look for a refinance option that helps you do one or more of the following:</p>
+
+                    <ul class="m-0">
+                        <li>
+                            Lock in a lower interest rate - The higher your interest rate, the more you pay for your mortgage, both now and in the future. Refinancing to a loan with a
+                            lower rate means you could get a lower payment as long as you don’t shorten the length of your mortgage term.
+                        </li>
+
+                        <li>
+                            Stop paying for private mortgage insurance (PMI) - If you put less than 20% down on your original home loan, chances are you're paying for PMI. If your home
+                            has increased in value and/or you have enough equity, you can refinance to eliminate this costly monthly payment.
+                        </li>
+
+                        <li>
+                            Get a longer loan term - When you refinance to a longer-term loan, you're stretching the amount you owe over a longer period of time. While you might pay
+                            more in interest overall, your monthly payment will decrease.
+                        </li>
+                    </ul>
+
+                    <h5>What Are The Advantages Of Refinancing To A Shorter Loan Term?</h5>
+                    <p>
+                        You'll be able to own your house sooner than you would with your current mortgage, which may put you in a better financial situation down the road. In the meantime,
+                        you'll likely save quite a bit on interest, since loans with shorter repayment periods generally have lower interest rates.
+                    </p>
+
+                    <h5>How Can I Take Cash Out Of My Home?</h5>
+                    <p class="pb-2">
+                        If you have enough equity in your home, you may be able to refinance to take cash out. Taking cash out means refinancing your home with a larger loan amount.
+                        Your new loan pays off your existing loan, and you get to pocket the difference.
+                    </p>
+                    <p>
+                        Many homeowners take cash out to pay off high-interest debt or fund home improvements. The cash you get from a cash-out refinance is tax free and yours to spend
+                        however you choose.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End purchase page HTML code -->

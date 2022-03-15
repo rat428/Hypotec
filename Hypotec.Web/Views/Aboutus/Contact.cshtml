@@ -1,0 +1,151 @@
+﻿@model Hypotec.Web.Models.ContactMessaageModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="contactusPage">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Message has been send successfully .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong> Message failed .
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="contactusImage">
+                    <img src="~/images/contact-us.svg" class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div class="contactusContent">
+                    <div class="all-caption contactText text-center">
+                        <h2>Contact <span class="blue-text">Us</span></h2>
+                        <p class="black-text"><strong>Opening Hours:</strong></p>
+                        <div class="row timeNoMail d-flex justify-content-center">
+                            <div class="col-md-4 col-6 offset-lg-1 offset-xl-2 p-0">
+                                <div class="text-left">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>Monday – Friday </p>
+                                        <small>:</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-6 p-0">
+                                <div class="text-left">
+                                    <p class="black-text">9:00AM EST – 7:00PM EST</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6 offset-lg-1 offset-xl-2 p-0">
+                                <div class="text-left">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>Toll-Free Calls</p>
+                                        <small>:</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-6 p-0">
+                                <div class="text-left">
+                                    <a href="tel:+844-497-6832">  <p class="black-text">844.497.6832</p> </a>
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6 offset-lg-1 offset-xl-2 p-0">
+                                <div class="text-left">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>Customer Care</p>
+                                        <small>:</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-6 p-0">
+                                <div class="text-left">
+                                    <p class="black-text"> info@hypotec.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="all-caption contactText text-center p-0">
+                    <div class="freddyInfo ">
+                        <div class="d-flex">
+                            <img src="~/images/freddy-headshot.png" class="img-fluid" />
+                            <div class="">
+                                <h5>Freddy Abitbol</h5>
+                                <small><strong>Contact the CEO</strong></small>
+                                <div class="textbtnarea">
+                                    <p>
+                                        At Hypotec, we’re an open book.  CEO and President Freddy Abitbol welcomes any and all feedback or questions you may have
+                                        regarding your mortgage.
+                                    </p>
+                                    <div class="row timeNoMail">
+                                        <div class="col-md-12 col-12 pt-2 px-0">
+                                            <div class="d-flex freddycliktext">
+                                                <a href="#" class="btn mt-0 mr-3" data-toggle="modal" data-target="#message">Message Today</a>
+                                                @*<a href="tel:+844-497-6832" class="btn c-round-btn">  <p class="black-text">844.497.6832</p> </a>*@
+                                                <a href="tel:+844-497-6832" class="btn mt-0">Call Today </a>
+
+                                                @*<a href="#" class="btn mt-0 " data-toggle="modal" data-target="#call">Call Today</a>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="applyModal frdymsg">
+    <div class="modal fade" id="message" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="messageLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header diffheading d-block text-center">
+                    <h5 class="modal-title" id="messageLabel">
+                        Message
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" id="savingform" method="post" asp-action="Contact" asp-controller="Aboutus">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Message to Freddy</label>
+                                <textarea asp-for="MessageToFreddy" id="MessageToFreddy" class="form-control"></textarea>
+                                <span asp-validation-for="MessageToFreddy" id="errorMessageToFreddy" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">                      
+                            <div class="register-form-btn">
+                                <button type="submit" class="btn" onclick="javascript:return ValidateContactMessage();">Send Message</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=""></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

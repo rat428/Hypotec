@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Hypotec.Web.Models.AdvisorModel>
+
+@{
+    ViewData["Title"] = "AllAdvisor";
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+
+<section class="agentbookingPage">
+    <div class="container">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong> Removed successfully.
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong> Record not deleted.
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption termofuseText">
+                    <h2 class="">All Advisor <span class="blue-text">Here</span></h2>
+                </div>
+            </div>
+            <div class="col-md-12 my-4">
+                <div class="col-md-12">
+                    @*<label id="lblshowSelectedVal"> </label>*@
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table custom-table-1">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Address)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Office)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Ext)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Text)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Call)
+                                </th>
+                                @*<th width="20%">
+                                    @Html.DisplayNameFor(model => model.About)
+                                </th>*@
+                                <th>
+                                    Image
+                                </th>
+                                <th >Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        @item.Name
+                                    </td>
+
+                                    <td class="text-center">
+                                        @item.Email
+                                    </td>
+                                    <td class="text-center">
+                                        @item.Address.Replace("##", " ").Replace("@", ",")@*<a class="float-right custom-button" href="#" data-toggle="modal" data-target="modalRegister">Read More</a>*@
+                                    </td>
+                                    <td class="text-center">
+                                        @item.Office
+                                    </td>
+                                    <td class="text-center">
+                                        @item.Ext
+                                    </td>
+                                    <td class="text-center">
+                                        @item.Text
+                                    </td>
+                                    <td class="text-center">
+                                        @item.Call
+                                    </td>
+                                    @*<td class="text-center" width="20%">
+                                        <p class="small-width-new">  @item.About</p><a data-toggle="modal" data-target="modalRegister-1" class="float-right custom-button" href="#">Read More</a>
+                                    </td>*@
+                                    <td class="text-center roundimg">
+
+                                        <img src="@item.ImagePath" class="" alt="" />
+                                    <td class="text-center anchor-link">
+                                        <div class="d-flex">
+                                            @Html.ActionLink("", "EditAdvisor", new { id = item.Id }, new { @class = "glyphicon glyphicon-edit" })
+                                            @Html.ActionLink(
+                                              "",
+                                              "DeleteAdvisor",
+                                              new { id = item.Id },
+                                              new { @class = "glyphicon glyphicon-trash", onclick = "return confirm('Are you sure you wish to delete this advisor?');" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="modalRegister" class="modal fade custom-popup" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="address"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalRegister-1" class="modal fade custom-popup" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="small-width-new"> </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

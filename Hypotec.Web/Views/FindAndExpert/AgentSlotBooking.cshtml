@@ -1,0 +1,133 @@
+﻿@model List<Hypotec.Web.Models.AgentSlotModel>
+@{
+    ViewData["Title"] = "AgentSlotBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="agentbookingPage">
+    <div class="container-fluid">
+        @if (ViewBag.Message != null && ViewBag.Message == true)
+        {
+            <div class="alert alert-success  alert-dismissible fade show">
+                <strong>Success!</strong>Slot booked successfully.
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        @if (ViewBag.Message == false)
+        {
+            <div class="alert alert-danger  alert-dismissible fade show">
+                <strong>Failed!</strong>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption termofuseText">
+                    <h2 class="">Please Select the Appointment <br /> Type to <span class="blue-text">Make a Booking.</span></h2>
+                </div>
+            </div>
+            <div class="col-md-12 my-4">
+                <div class="col-md-12">
+                    @*<label id="lblshowSelectedVal"> </label>*@
+                </div>
+                <div class="table-responsive">
+
+                    <table class="table table-bordered">
+                        <tr>
+                            @{int NoDays = 0;
+                            }
+                            @foreach (var quotes in Model)
+                            {
+                                <td class="text-center">
+                                    <label id="@quotes.DayName"><strong>@DateTime.Today.AddDays(NoDays).ToString("d")</strong> </label> <br />
+
+                                    @{NoDays = NoDays + 1;}
+                                    <div class="d-block">
+                                        @quotes.DayName
+                                    </div>
+                                    <br />
+
+                                    @for (var i = 0; i < quotes.Slots.Count; i++)
+                                    {
+                                        if (quotes.SlotStatus[i].SlotStatus.ToString() == "Active")
+                                        {
+                                            <input type="button" class="form-control" data-toggle="modal" data-target="#gatrtrresr" data-dismiss="modal" onclick="setslotvalue(this)" id='btn' hdnSlotId="@quotes.Id" dayname="@quotes.DayName" value="@quotes.Slots[i].Slot" />
+                                        }
+                                        else
+                                        {
+                                            <input type="button" class="form-control" value="@quotes.Slots[i].Slot"  disabled="disabled" />
+                                        }
+                                        <br />
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="register-form-btn">
+                    <button id="btnslotnext" type="button" class="btn w-100" data-toggle="modal" data-target="#gatrtrresr" data-dismiss="modal" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="applyModal reqclbk">
+    <div class="modal fade" id="gatrtrresr" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="gatrtrresrLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header diffheading d-block text-center">
+                    <h5 class="modal-title" id="gatrtrresrLabel">
+                        <label id="lblSlot"> </label>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="row">
+
+
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" id="name" class="form-control" />
+                                <span style="color:red" id="errorName"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Phone</label>
+                                @*<input type="text" id="phone" class="form-control" />*@
+                                <input type="tel" id="phone" name="phone"
+                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control"
+                                       required>
+                                <span style="color:red" id="errorPhone"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" id="email" class="form-control" />
+                                <span style="color:red" id="errorEmail"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 px-0">
+                            <div class="register-form-btn">
+                                <input type="button" onclick="SendMailtest();" class="btn w-100" value="Send Message" />
+                                @*<button type="submit" onclick="SendMailtest();" class="btn w-100">Send Message</button>*@
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=""></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

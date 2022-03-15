@@ -1,0 +1,30 @@
+﻿@model Hypotec.Web.Models.ResourceModel
+@{
+    ViewData["Title"] = "Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="blogDetailsPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-caption text-center">
+                    @if (Model != null)
+                    {
+                       @Html.Raw(@Model.Header)
+                    }
+                </div>
+                <br />
+            </div>
+            <div class="col-md-12">
+                <div class="blogDetailsContent text-center">
+                    @if (Model != null)
+                    {
+                        @Html.Raw(@Model.Description)
+                    }
+                    <br />
+                    <a href='@Url.Action("Blogs", "Aboutus")'>Go To Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "FindExpert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- start start page HTML code -->
+<section class="findAnExpert-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="findAnEximg">
+                    <img src="~/images/h-map.PNG" class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="all-caption findAnEx-text">
+                    <h2>Find An <span class="blue-text">Expert</span></h2>
+                    <p>The Key To Finding The RIGHT Home Is Working With The RIGHT Loan Officer</p>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="mortgageCalculator">
+                    <h4>Start Searching Now</h4>
+                    <div class="formBase">
+                        <form class="row lign-items-center" action="#">
+                            <div class="form-group col-5 mb-3">
+                                <label for="">Search Area</label>
+                                <div class="input-group">
+
+                                    <input type="text" class="form-control border-left-0" id="serachArea1" />
+                                </div>
+                            </div>
+                            <div class="form-group col mb-3">
+                                <label for="">Search Radius</label>
+                                <select class="form-control" id="radius">
+                                    <option value="10">10 mi</option>
+                                    <option value="25">25 mi</option>
+                                    <option value="50">50 mi</option>
+                                    <option value="100">100 mi</option>
+                                    <option value="200">200 mi</option>
+                                    <option value="500" selected>500 mi</option>
+                                </select>
+                            </div>
+                            <div class="form-group col mb-3">
+                                <label for="">Results</label>
+                                <select class="form-control" id="result">
+                                    <option value="24">25</option>
+                                    <option value="50">50</option>
+                                    <option value="75">75</option>
+                                    <option value="100" selected>100</option>
+
+                                </select>
+                            </div>
+                            <div class="col">
+                                <div class="text-center form-btn pt-4">
+                                    <input type="hidden" id="hdnlongitude" value="" />
+                                    <input type="hidden" id="hdnlatitude" value="" />
+                                    <input type="button" onclick="SerachAdvisor();" class="btn w-100" value="Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="searchResult" id="divAdvisorContent">
+                </div>
+            </div>
+            @*<div class="col-md-6">
+                    <div id="map" style="border:0; height:450px !important" allowfullscreen="" aria-hidden="false" tabindex="0"></div>
+                    <div class="">
+                        <img src="~/images/map.svg" class="img-fluid" alt="" />
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</section>
+<!-- end start page HTML code -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCvc4mkPDRa1B2tlQT6pQGzgSkhqHx9wQg"></script>
+<script type="text/javascript">
+
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('serachArea1'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+            //document.getElementById('txtAddress').value = place.formatted_address;
+            //document.getElementById('hdnlongitude').value = place.geometry.location.lat();
+            //document.getElementById('hdnlongitude').value = place.geometry.location.lng();
+            $('#hdnlatitude').val(place.geometry.location.lat());
+            $('#hdnlongitude').val(place.geometry.location.lng());
+            //alert('latlong');
+            //alert(place.geometry.location.lat());
+            //alert(place.geometry.location.lng());
+        });
+    });
+</script>

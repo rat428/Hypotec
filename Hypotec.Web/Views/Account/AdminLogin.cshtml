@@ -1,0 +1,77 @@
+﻿@model Hypotec.Web.Models.LoginModel
+
+@{
+    ViewData["Title"] = "AdminLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start signin page HTML code -->
+<section class="signin-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="leftSideContent">
+                    <h3>
+                        Sign In To Your <br />
+                        <span class="blue-text">Account</span>
+                    </h3>
+                    <h5>
+                        @*If You Don't Have a Account <br />
+                            You can <a href="javascript:void(0);">Register Here</a>*@
+                    </h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="form-area border-0 p-0">
+                        <h4>Log In Admin User.</h4>
+                        <form method="post" asp-action="AdminLogin">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" asp-for="Email" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" asp-for="Password" id="PasswordHash1" class="form-control border-right-0" />
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text border-left-0 bg-transparent"><i toggle="PasswordHash1" class="fas fa-eye-slash eyeShowHides"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="register-form-btn">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn w-100">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="back-bg">
+                        <div class="container">
+                            <div class="forgot-section">
+                                @if (@ViewBag.Message != "Invalid user.")
+                                {
+                                    <h4 class="text-center text-success">@ViewBag.Message</h4>
+                                }
+                                else
+                                {
+                                    <h4 class="text-center text-danger">@ViewBag.Message</h4>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- end signin page HTML code -->

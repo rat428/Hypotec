@@ -1,0 +1,3099 @@
+@media only screen and (max-width: 3000px) {
+    .gImage canvas:first-child {
+        height: auto !important;
+    }
+
+}
+    @media only screen and (max-width: 1600px) {
+        .banner-bg,
+        .header .navbar {
+            padding: 0 55px;
+        }
+
+        .gImage {
+            margin: 0 auto !important;
+            display: inline-block;
+            min-height: 180px  !Important;
+            text-align: center;
+        }
+
+        .banner-bg {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .navbar-expand-xl .navbar-nav .nav-link {
+            font-size: 14px;
+        }
+
+        .mobile-men img {
+            width: 75%;
+        }
+
+        .mobile-men .man-img img {
+            width: 25%;
+            left: 53%;
+            top: 40%;
+        }
+
+        .mobile-men .alllinkbox {
+            position: absolute;
+            left: 30.3%;
+            top: 22.2%;
+            width: 36%;
+            height: auto;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 65px 55px;
+        }
+
+            .today-rates-section::before {
+                background-size: 92%;
+            }
+
+        .header {
+            padding-bottom: 76px;
+        }
+
+        .resourcePage {
+            padding: 80px 100px;
+        }
+
+        .all-caption.careerText {
+            padding: 0 0 0;
+        }
+
+        .copyright-text {
+            padding: 20px 55px 50px;
+        }
+
+        .hikPage {
+            padding: 80px 200px;
+        }
+
+        .signin-page {
+            padding: 220px 200px 186px;
+        }
+
+        .addBoxLis {
+            padding: 24px 15px;
+            font-size: 14px;
+        }
+
+        .double-btnText .btn {
+            font-size: 13px;
+            padding: 8px 26px;
+        }
+
+        .all-caption p {
+            font-size: 14px;
+        }
+
+        .welcomecontent p {
+            font-size: 14px;
+        }
+
+        .twoButton .btn {
+            padding: 10px 50px;
+            font-size: 15px;
+        }
+
+        .all-caption h2 {
+            font-size: 55px;
+        }
+
+        .formBase label {
+            font-size: 13px;
+        }
+
+        .dualbtn .btn {
+            padding: 10px 25px;
+        }
+
+        .threebox {
+            padding: 120px 55px 0;
+        }
+
+        .scheduleBox h3 {
+            font-size: 24px;
+        }
+
+        .scheduleBox p {
+            font-size: 15px;
+        }
+
+        .bgBlue {
+            padding: 40px 55px;
+        }
+
+        .realagentPage {
+            padding: 80px 100px;
+        }
+
+        .blogPage {
+            padding: 80px 100px;
+        }
+
+        .careerInfo h3 {
+            font-size: 18px;
+        }
+
+        .careerInfo p {
+            font-size: 14px;
+        }
+
+        .form-btn .btn {
+            margin: 0;
+            width: 100%;
+        }
+
+        .contactusPage {
+            padding: 150px 150px 100px;
+        }
+
+        .all-caption.findAnEx-text {
+            padding-top: 80px;
+        }
+
+        .checklistcontent ul li .form-control {
+            width: 30%;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 40%;
+        }
+
+        .all-caption.contactText {
+            padding-top: 100px;
+        }
+
+        .findAnExpert-page {
+            padding: 80px 130px 0;
+        }
+
+        .scheduleBox {
+            padding: 45px 45px;
+        }
+
+        .all-caption.about-caption {
+            padding-top: 0px;
+        }
+
+        .contactusImage img {
+            margin-top: 50px;
+        }
+
+        .bottom-other-links {
+            padding: 0;
+        }
+
+        .hoverArea {
+            padding: 90px 20px 55px;
+            height: 300px;
+        }
+
+            .hoverArea p {
+                color: #393939;
+                font-weight: 400;
+                font-size: 13px;
+                padding: 6px 0px 0px;
+                transition: 0.5s;
+                margin: 0;
+            }
+
+        .bellow-content h3 {
+            font-size: 35px;
+        }
+
+        .bellow-content p {
+            font-size: 14px;
+        }
+
+        .all-caption.blog-text {
+            padding-top: 270px;
+        }
+
+        .radioBoxDiv {
+            width: 47%;
+        }
+
+        .formBase .form-control {
+            font-size: 13px;
+        }
+
+        .twoButton p {
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+        .lenderContent h4 {
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        .header .navbar {
+            padding: 10px 55px;
+        }
+
+        .banner-bg {
+            height: 100vh;
+            padding: 10px 55px;
+        }
+
+        .header .navbar-expand-xl .navbar-nav .nav-link {
+            font-size: 14px;
+        }
+
+        .mobile-men img {
+            width: 75%;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 65px 55px;
+        }
+
+        .all-caption.client-caption {
+            padding: 50px 0;
+        }
+
+        .header .main-logo img {
+            width: 145px;
+            margin-right: 0;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+            padding-bottom: 8px;
+        }
+
+        .all-caption h2 {
+            font-size: 50px;
+        }
+
+        .all-caption p {
+            font-size: 13px;
+            padding-top: 8px;
+            line-height: 22px;
+        }
+
+        .all-caption .btn {
+            font-size: 14px;
+            padding: 8px 30px;
+            margin-top: 20px;
+        }
+
+        .all-caption.banner-caption h2 {
+            font-size: 80px;
+            line-height: 75px;
+        }
+
+        .table-div {
+            height: 100vh;
+        }
+
+        .about-us-img img {
+            width: 65%;
+            display: block;
+        }
+
+        .read-point span {
+            font-size: 14px;
+        }
+
+        .all-caption.about-caption {
+            padding: 0 175px;
+        }
+
+        .rate-img img {
+            width: 65%;
+        }
+
+        .all-caption.rate-today {
+            padding-top: 85px;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            left: -185px;
+            top: 500px;
+            transform: rotate(0);
+        }
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .testimonial::before {
+            background-size: 50% 71%;
+            bottom: 0;
+        }
+
+        .home-form {
+            margin: 10px 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 14px;
+            }
+
+        .other-links h3 {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 13px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 13px;
+        }
+
+        .right-button-group .getstarted a.c-bg-btn {
+            font-size: 12px;
+            padding: 4px 20px;
+        }
+
+        .right-button-group .call a.c-round-btn {
+            font-size: 12px;
+            padding: 4px 20px;
+        }
+
+        .right-button-group .signin a {
+            padding: 6px 15px 0;
+            font-size: 15px;
+        }
+
+        .bottom-other-links {
+            padding: 0;
+        }
+
+        .copyright-text {
+            padding: 0 55px 30px;
+        }
+
+        .contactusImage img {
+            width: 85%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .all-caption.contactText {
+            padding: 7px 0 0;
+        }
+
+        .header {
+            padding-bottom: 57px;
+        }
+
+        .signin-page {
+            padding: 220px 140px 140px;
+        }
+
+        .register-page {
+            width: 77%;
+        }
+
+        .form-heading h2 {
+            font-size: 45px;
+        }
+
+        .form-area {
+            padding: 20px;
+        }
+
+            .form-area h4 {
+                font-size: 20px;
+            }
+
+            .form-area .form-control {
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .form-area label {
+                font-size: 14px;
+            }
+
+        .start-page {
+            padding: 150px 70px;
+        }
+
+        .start-heading h3 {
+            font-size: 75px;
+        }
+
+        .purchaseArea .btn {
+            padding: 20px 101px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .start-heading h4 {
+            font-size: 30px;
+            padding: 30px 0 50px;
+        }
+
+        .orText p {
+            margin: 0;
+            padding: 20px 60px;
+        }
+
+        .start-page {
+            padding: 250px 70px;
+        }
+
+        .bellow-content h3 {
+            font-size: 30px;
+        }
+
+        .bellow-content p {
+            font-size: 16px;
+        }
+
+        .blogPage {
+            padding: 80px 80px;
+        }
+
+        .blogSideHeight .bellow-content {
+            padding-top: 20px;
+        }
+
+        .all-caption.blog-text {
+            padding-top: 20px;
+        }
+
+        .mortgageCalculatorPage {
+            padding: 50px 50px 20px;
+        }
+
+        .imgList {
+            display: block;
+        }
+
+        .formBase label {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .radioBoxDiv {
+            width: 48%;
+        }
+
+        .careerPage {
+            padding: 60px 80px;
+        }
+
+        .form-btn .btn {
+            padding: 10px 53px;
+        }
+
+        .careerInfo h3 {
+            font-size: 18px;
+        }
+
+        .careerInfo p {
+            font-size: 14px;
+        }
+
+        .formBase label {
+            color: #393939;
+            font-size: 14px;
+            font-weight: 400;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .radioBoxDiv {
+            width: 47%;
+        }
+
+        .purchasePage {
+            padding: 80px 60px 20px;
+        }
+
+        .formBase .form-control {
+            font-size: 12px;
+        }
+
+        .form-btn {
+            padding-top: 27px;
+        }
+
+        .gImage {
+            width: 300px;
+            height: 300px;
+            margin: -15px 0 0 0;
+            padding: 0;
+        }
+
+        .mobile-men .alllinkbox {
+            position: absolute;
+            left: 30.3%;
+            top: 22.2%;
+            width: 36%;
+            height: auto;
+        }
+
+        .mobile-men .man-img img {
+            width: 25%;
+            left: 53%;
+            top: 40%;
+        }
+
+        .about-page {
+            padding: 80px 100px;
+        }
+
+        .all-caption.about-text {
+            padding-top: 100px;
+        }
+
+        .careerImage img {
+            width: 60%;
+            margin: 0 50px 0;
+        }
+
+        .all-caption.careerText {
+            padding: 85px 0 0;
+        }
+
+        .boxHover {
+            padding: 0 130px;
+        }
+
+        .hoverArea h3 {
+            font-size: 22px;
+        }
+
+        .hoverArea p {
+            padding: 13px;
+        }
+
+        .hoverArea {
+            padding: 60px 0 40px;
+            transition: 0.3s;
+            height: 240px;
+        }
+
+        .comm-opt-out {
+            padding: 80px 100px;
+        }
+
+        .checklistcontent ul li .form-control {
+            width: 30%;
+        }
+
+        .bottom-other-links ul li a {
+            font-size: 13px;
+        }
+
+        .logo-side p {
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        .affiliatedbusinessesPage {
+            padding: 100px 50px;
+        }
+
+        .blueBoxIcon h4 {
+            font-size: 20px;
+        }
+
+        .scheduleBox {
+            padding: 45px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 1370px) {
+        .header .navbar {
+            padding: 10px 55px;
+        }
+
+        .banner-bg {
+            height: 100vh;
+            padding: 10px 55px;
+        }
+
+        .header .navbar-expand-xl .navbar-nav .nav-link {
+            font-size: 14px;
+        }
+
+        .mobile-men img {
+            width: 75%;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 65px 55px;
+        }
+
+        .all-caption.client-caption {
+            padding: 50px 0;
+        }
+
+        .header .main-logo img {
+            width: 145px;
+            margin-right: 0;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+            padding-bottom: 8px;
+        }
+
+        .all-caption h2 {
+            padding-bottom: 15PX;
+            font-size: 35px;
+        }
+
+        .all-caption p {
+            font-size: 13px;
+            padding-top: 8px;
+            line-height: 22px;
+        }
+
+        .all-caption .btn {
+            font-size: 14px;
+            padding: 8px 30px;
+            margin-top: 20px;
+        }
+
+        .all-caption.banner-caption h2 {
+            font-size: 80px;
+            line-height: 75px;
+        }
+
+        .table-div {
+            height: 100vh;
+        }
+
+        .about-us-img img {
+            width: 65%;
+            display: block;
+        }
+
+        .read-point span {
+            font-size: 14px;
+        }
+
+        .all-caption.about-caption {
+            padding: 0 175px;
+        }
+
+        .rate-img img {
+            width: 65%;
+        }
+
+        .all-caption.rate-today {
+            padding-top: 85px;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            right: -100%;
+            top: 35%;
+            transform: rotate(90deg);
+        }
+
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .testimonial::before {
+            background-size: 50% 71%;
+            bottom: 0;
+        }
+
+        .home-form {
+            margin: 10px 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 14px;
+            }
+
+        .other-links h3 {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 13px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 13px;
+        }
+
+        .right-button-group .getstarted a.c-bg-btn {
+            font-size: 12px;
+            padding: 5px 23px;
+        }
+
+        .right-button-group .call a.c-round-btn {
+            font-size: 12px;
+            padding: 4px 20px;
+        }
+
+        .right-button-group .signin a {
+            padding: 6px 15px 0;
+            font-size: 15px;
+        }
+
+        .bottom-other-links {
+            padding: 0;
+        }
+
+        .copyright-text {
+            padding: 0 55px 30px;
+        }
+
+        .contactusImage img {
+            width: 85%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .all-caption.contactText {
+            padding: 7px 0 0;
+        }
+
+        .header {
+            padding-bottom: 80px;
+        }
+
+        .signin-page {
+            padding: 220px 140px 140px;
+        }
+
+        .register-page {
+            width: 77%;
+        }
+
+        .form-heading h2 {
+            font-size: 45px;
+        }
+
+        .form-area {
+            padding: 20px;
+        }
+
+            .form-area h4 {
+                font-size: 20px;
+            }
+
+            .form-area .form-control {
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .form-area label {
+                font-size: 14px;
+            }
+
+        .start-page {
+            padding: 150px 70px;
+        }
+
+        .start-heading h3 {
+            font-size: 75px;
+        }
+
+        .purchaseArea .btn {
+            padding: 20px 101px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .start-heading h4 {
+            font-size: 30px;
+            padding: 30px 0 50px;
+        }
+
+        .orText p {
+            margin: 0;
+            padding: 20px 60px;
+        }
+
+        .start-page {
+            padding: 250px 70px;
+        }
+
+        .bellow-content h3 {
+            font-size: 30px;
+        }
+
+        .bellow-content p {
+            font-size: 16px;
+        }
+
+        .blogPage {
+            padding: 80px 80px;
+        }
+
+        .blogSideHeight .bellow-content {
+            padding-top: 20px;
+        }
+
+        .all-caption.blog-text {
+            padding-top: 20px;
+        }
+
+        .mortgageCalculatorPage {
+            padding: 50px 50px 20px;
+        }
+
+        .imgList {
+            display: block;
+        }
+
+        .formBase label {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .radioBoxDiv {
+            width: 48%;
+        }
+
+        .careerPage {
+            padding: 60px 80px;
+        }
+
+        .form-btn .btn {
+            padding: 10px 53px;
+        }
+
+        .careerInfo h3 {
+            font-size: 18px;
+        }
+
+        .careerInfo p {
+            font-size: 14px;
+        }
+
+        .formBase label {
+            color: #393939;
+            font-size: 14px;
+            font-weight: 400;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .radioBoxDiv {
+            width: 47%;
+        }
+
+        .purchasePage {
+            padding: 80px 60px 20px;
+        }
+
+        .formBase .form-control {
+            font-size: 12px;
+        }
+
+        .form-btn {
+            padding-top: 27px;
+        }
+
+        .gImage {
+            width: 300px;
+            height: 300px;
+            margin: -15px 0 0 0;
+            padding: 0;
+        }
+
+        .mobile-men .alllinkbox {
+            position: absolute;
+            left: 30.3%;
+            top: 22.2%;
+            width: 36%;
+            height: auto;
+        }
+
+        .mobile-men .man-img img {
+            width: 25%;
+            left: 53%;
+            top: 40%;
+        }
+
+        .about-page {
+            padding: 80px 100px;
+        }
+
+        .all-caption.about-text {
+            padding-top: 100px;
+        }
+
+        .careerImage img {
+            width: 60%;
+            margin: 0 50px 0;
+        }
+
+        .all-caption.careerText {
+            padding: 85px 0 0;
+        }
+
+        .boxHover {
+            padding: 0 130px;
+        }
+
+        .hoverArea h3 {
+            font-size: 22px;
+        }
+
+        .hoverArea p {
+            padding: 13px;
+        }
+
+        .hoverArea {
+            padding: 60px 0 40px;
+            transition: 0.3s;
+            height: 240px;
+        }
+
+        .comm-opt-out {
+            padding: 80px 150px;
+        }
+
+        .checklistcontent ul li .form-control {
+            width: 30%;
+        }
+
+        .bottom-other-links ul li a {
+            font-size: 13px;
+        }
+
+        .logo-side p {
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        .affiliatedbusinessesPage {
+            padding: 100px 150px;
+        }
+
+        .hikPage {
+            padding: 80px 150px;
+        }
+
+        .agentImage img {
+            width: 60%;
+            margin: 35px 0;
+        }
+
+        .termofUse {
+            padding: 80px 150px;
+        }
+
+        .addbox h3 {
+            font-size: 18px;
+        }
+
+        .addbox p {
+            font-size: 14px;
+        }
+
+        .addbox {
+            padding: 0;
+        }
+
+        .searchResult {
+            margin-top: 50px;
+        }
+
+        div#map {
+            margin-top: 50px;
+        }
+
+        .mortadvisorPage {
+            padding: 40px 40px;
+        }
+
+        .stateLicensing-page {
+            padding: 80px 100px 40px;
+        }
+
+        .agentprofilePage {
+            padding: 80px 112px;
+        }
+
+        .imgnameArea h3 {
+            padding: 0px;
+        }
+
+        .realagentPage {
+            padding: 40px 10px;
+        }
+
+        .slotarea ul li {
+            width: 24%;
+        }
+
+        .mcContent h5 {
+            font-size: 16px;
+        }
+
+        .mcContent p {
+            font-size: 12px;
+        }
+
+        .mcContent ul li {
+            font-size: 12px;
+        }
+
+        .mcContent {
+            padding: 0px 0;
+        }
+
+        .purchasePage {
+            padding: 40px 60px 20px;
+        }
+
+        .formBase {
+            margin-bottom: 30px;
+        }
+
+        .blogDetailsPage {
+            padding: 80px 200px;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 60%;
+        }
+
+        .modal-title {
+            margin-bottom: 0;
+            line-height: 1.5;
+            padding: 0 35px;
+        }
+
+        .applyModal .close {
+            top: 9%;
+        }
+
+        .agentCard h4 {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .banner-bg,
+        .header .navbar {
+            padding: 0 40px;
+        }
+
+        .IndexRatecenter ul li {
+            width: 100% !important;
+        }
+
+        .IndexRatecenter {
+            border: 0px solid #FFFFff;
+            width: 768px !important;
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner-bg {
+            height: 65vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 65px 35px;
+        }
+
+        .all-caption.client-caption {
+            padding: 36px 0;
+        }
+
+        .header .main-logo img {
+            width: 145px;
+            margin: 6px 0;
+        }
+
+        .mobile-men img {
+            width: 100%;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+            padding-bottom: 8px;
+        }
+
+        .all-caption h2 {
+            font-size: 35px;
+        }
+
+        .all-caption p {
+            font-size: 12px;
+            padding-top: 8px;
+            line-height: 22px;
+        }
+
+        .all-caption .btn {
+            font-size: 14px;
+            padding: 8px 40px;
+            margin-top: 20px;
+        }
+
+        .table-div {
+            height: 50vh;
+        }
+
+        .about-us-img img {
+            width: 100%;
+            display: inline;
+        }
+
+        .read-point span {
+            font-size: 14px;
+        }
+
+        .all-caption.about-caption {
+            padding: 0;
+        }
+
+        .rate-img img {
+            width: 70%;
+        }
+
+        .all-caption.rate-today {
+            padding: 53px 0;
+        }
+
+        .today-rates-section::before {
+            background-size: 162%;
+            background-position: right bottom;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            left: -185px;
+            top: 500px;
+            transform: rotate(0);
+        }
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 75%;
+            margin-top: 30px;
+        }
+
+        .home-form {
+            margin: 0 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 14px;
+            }
+
+        .other-links h3 {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 14px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 14px;
+        }
+
+        .right-button-group .getstarted a.c-bg-btn {
+            font-size: 12px;
+            padding: 4px 20px;
+        }
+
+        .right-button-group .call a.c-round-btn {
+            font-size: 12px;
+            padding: 4px 20px;
+        }
+
+        .right-button-group .signin a {
+            padding: 6px 15px 0;
+            font-size: 15px;
+        }
+
+            .right-button-group .signin a::before {
+                top: 0;
+            }
+
+        .dualbtn .btn {
+            width: 21%;
+        }
+
+        .copyright-text {
+            padding: 0 35px 30px;
+        }
+
+        .all-caption.contactText {
+            padding: 18px 0 0;
+        }
+
+        .contactusImage img {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .contactusPage {
+            padding: 100px 100px;
+        }
+
+        .header {
+            padding-bottom: 68px;
+        }
+
+        .signin-page {
+            padding: 220px 50px 140px;
+        }
+
+        .form-area h4 {
+            color: #393939;
+            font-size: 20px;
+        }
+
+        .leftSideContent h3 {
+            font-size: 50px;
+        }
+
+        .register-page {
+            width: 90%;
+            margin: 100px auto 50px;
+        }
+
+        .form-heading h2 {
+            font-size: 45px;
+        }
+
+        .form-area {
+            padding: 20px;
+        }
+
+            .form-area h4 {
+                font-size: 18px;
+            }
+
+            .form-area .form-control {
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .form-area label {
+                font-size: 14px;
+            }
+
+        .register-form-btn .btn {
+            font-size: 14px;
+        }
+
+        .register-form-btn a {
+            padding: 13px 20px;
+            font-size: 14px;
+        }
+
+        .start-heading h3 {
+            font-size: 65px;
+        }
+
+        .purchaseArea .btn {
+            padding: 15px 45px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .start-heading h4 {
+            font-size: 26px;
+            padding: 20px 0 50px;
+        }
+
+        .orText p {
+            margin: 0;
+            padding: 20px 30px;
+        }
+
+        .start-page {
+            padding: 200px 70px;
+        }
+
+        .all-caption.about-text {
+            padding-top: 30px;
+        }
+
+        .blogPage {
+            padding: 40px 30px;
+        }
+
+        .blogBtn .btn {
+            font-size: 14px;
+            padding: 8px 28px;
+        }
+
+        .mortgageCalculatorPage {
+            padding: 40px 50px 20px;
+        }
+
+        .gImage {
+            text-align: center;
+        }
+
+        .imgList {
+            display: block;
+        }
+
+        .formBase label {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .radioBoxDiv {
+            width: 68%;
+        }
+
+        .rBoxContent {
+            padding: 15px;
+            justify-content: center;
+            display: block;
+        }
+
+        .rBoxHeader h4 span.resultRate {
+            font-size: 20px;
+        }
+
+        .rBoxHeader .dropdown button.btn {
+            font-size: 14px;
+        }
+
+        .rBoxHeader h4 {
+            font-size: 14px;
+        }
+
+        .mobile-men .alllinkbox {
+            position: absolute;
+            left: 24%;
+            top: 22.2%;
+            width: 48%;
+            height: auto;
+        }
+
+        .mobile-men .man-img img {
+            width: 32%;
+            left: 65%;
+            top: 40%;
+        }
+
+        .about-img-side img {
+            width: 60%;
+            margin: 0 50px 0;
+        }
+
+        .careerBase {
+            padding: 20px;
+        }
+
+        .form-btn .btn {
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .boxHover {
+            padding: 0 0;
+        }
+
+        .hoverArea {
+            padding: 60px 25px 40px;
+            transition: 0.3s;
+            height: 200px;
+        }
+
+        .disclosuresLicenses {
+            padding: 60px 100px;
+        }
+
+        .leftsidemenubarinner .dropdown-menu {
+            position: relative !important;
+            transform: translate(0) !important;
+            border: 1px solid #b2b2b226;
+        }
+
+        .leftsidemenubarinner .dropdown-item {
+            padding: 8px 20px;
+            font-size: 15px;
+        }
+
+        .leftsidemenubarinner .nav-link {
+            padding: 1rem;
+        }
+
+        .resourcePage {
+            padding: 40px 40px;
+        }
+
+        .stateLicensing-page {
+            padding: 40px 40px;
+        }
+
+        .reBoxContent h3 {
+            font-size: 15px;
+            padding: 0px 0px 10px;
+        }
+
+        .reBoxContent p {
+            font-size: 13px;
+        }
+
+        .rightLeftSection {
+            padding: 40px 50px 0;
+        }
+
+        .addBoxLis p {
+            font-size: 14px;
+        }
+
+        .addBoxLis h3 {
+            font-size: 20px;
+        }
+
+        .all-caption.stateLin-text {
+            padding-top: 50px;
+        }
+
+        .agentprofilePage {
+            padding: 40px 42px;
+        }
+
+        .imgnameArea h3 {
+            padding: 0px;
+        }
+
+        .realagentPage {
+            padding: 40px 10px;
+        }
+
+        .agentbookingPage {
+            padding: 40px 40px;
+        }
+
+        .mcContent ul {
+            padding: 10px 0px 0px 16px;
+        }
+
+        .freddyInfo {
+            padding: 0 0 0 56px;
+        }
+
+        .contactusPage {
+            padding: 70px 30px;
+        }
+
+        .all-caption.contactText .timeNoMail p {
+            font-size: 14px;
+        }
+
+        .all-caption.careerText {
+            padding: 15px 0 0;
+        }
+
+        .careerDetailsPage {
+            padding: 60px 100px;
+        }
+
+        .blogDetailsPage {
+            padding: 80px 150px;
+        }
+
+        .agentExperience {
+            padding: 60px 100px;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 55%;
+        }
+
+        .applyModal.reqclbk .close {
+            top: 10%;
+        }
+
+        .affiliatedbusinessesPage {
+            padding: 60px 100px;
+        }
+
+        .hikPage {
+            padding: 60px 60px;
+        }
+
+        .comm-opt-out {
+            padding: 60px 100px;
+        }
+
+        .siteaccessibilityPage {
+            padding: 60px 100px;
+            height: auto;
+        }
+
+        .termofUse {
+            padding: 60px 100px;
+        }
+
+        .privacypolicy {
+            padding: 60px 80px;
+        }
+
+        .reviewDetailsPage {
+            padding: 80px 100px;
+        }
+
+        .gbbox img {
+            width: 55%;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 70%;
+        }
+
+        .scheduleBox {
+            padding: 45px 15px;
+        }
+
+            .scheduleBox h3 {
+                font-size: 18px;
+            }
+
+        .agentCard small {
+            font-size: 13px;
+        }
+
+        .agentCard a {
+            font-size: 13px;
+        }
+
+        .agentCard small.stateadd {
+            font-size: 12px;
+        }
+
+        .agentCard p {
+            font-size: 13px;
+        }
+
+        .agentCard h4 {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .banner-bg,
+        .header .navbar {
+            padding: 0 20px;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 65px 35px;
+        }
+
+        .all-caption.client-caption {
+            padding: 0 0 35px;
+        }
+
+        .header .main-logo img {
+            width: 145px;
+            margin-right: 0;
+        }
+
+        .all-caption.banner-caption h2 {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+            padding-bottom: 8px;
+        }
+
+        .all-caption h2 {
+            font-size: 35px;
+        }
+
+        .all-caption p {
+            font-size: 12px;
+            padding-top: 8px;
+            line-height: 22px;
+        }
+
+        .all-caption .btn {
+            font-size: 14px;
+            padding: 8px 40px;
+            margin-top: 20px;
+        }
+
+        .table-div {
+            height: 50vh;
+        }
+
+        .about-us-img img {
+            width: 100%;
+            display: inline;
+        }
+
+        .read-point span {
+            font-size: 14px;
+        }
+
+        .all-caption.about-caption {
+            padding: 0;
+        }
+
+        .rate-img img {
+            width: 100%;
+        }
+
+        .all-caption.rate-today {
+            padding-top: 13px;
+        }
+
+        .today-rates-section::before {
+            background-size: 162%;
+            background-position: right bottom;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            left: -185px;
+            top: 500px;
+            transform: rotate(0);
+        }
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 90%;
+            margin-top: 30px;
+        }
+
+        .testimonial::before {
+            background-size: 100%;
+            bottom: -219px;
+        }
+
+        .home-form {
+            margin: 10px 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 14px;
+            }
+
+        .other-links h3 {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 14px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 14px;
+        }
+
+        .contactusPage {
+            padding: 100px 25px;
+        }
+
+        .all-caption.contactText {
+            padding: 3px 0 0;
+        }
+
+        .header {
+            padding-bottom: 68px;
+        }
+
+        .signin-page {
+            padding: 140px 50px 100px;
+        }
+
+        .leftSideContent h3 {
+            font-size: 35px;
+        }
+
+        .form-area h4 {
+            font-size: 13px;
+        }
+
+        .form-area .form-group {
+            padding-bottom: 20px;
+        }
+
+        .register-page {
+            width: 90%;
+            margin: 100px auto 50px;
+        }
+
+        .form-heading h2 {
+            font-size: 45px;
+        }
+
+        .form-area {
+            padding: 20px;
+        }
+
+            .form-area h4 {
+                font-size: 18px;
+            }
+
+            .form-area .form-control {
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .form-area label {
+                font-size: 14px;
+            }
+
+        .register-form-btn .btn {
+            font-size: 14px;
+        }
+
+        .register-form-btn a {
+            padding: 13px 20px;
+            font-size: 14px;
+        }
+
+        .start-heading h3 {
+            font-size: 65px;
+        }
+
+        .purchaseArea .btn {
+            padding: 15px 45px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .start-heading h4 {
+            font-size: 26px;
+            padding: 20px 0 50px;
+        }
+
+        .orText p {
+            margin: 0;
+            padding: 20px 30px;
+        }
+
+        .start-page {
+            padding: 200px 70px;
+        }
+
+        .about-page {
+            padding: 80px 20px 40px;
+        }
+
+        .blogPage {
+            padding: 40px 30px;
+        }
+
+        .bellow-content h3 {
+            font-size: 25px;
+        }
+
+        .blogDate h4 {
+            font-size: 16px;
+        }
+
+        .blogSideHeight .bellow-content p {
+            font-size: 14px;
+        }
+
+        .blogBtn .btn {
+            font-size: 14px;
+            padding: 6px 26px;
+        }
+
+        .radioBoxDiv {
+            width: 72%;
+        }
+
+        .rBoxContent {
+            padding: 15px;
+            justify-content: center;
+            display: block;
+        }
+
+        .rBoxHeader h4 span.resultRate {
+            font-size: 20px;
+        }
+
+        .rBoxHeader .dropdown button.btn {
+            font-size: 14px;
+        }
+
+        .rBoxHeader h4 {
+            font-size: 14px;
+        }
+
+        .mobile-men .linkbox img {
+            width: 30%;
+        }
+
+        .about-img-side img {
+            width: 100%;
+            margin: 0;
+            display: block;
+            padding: 0 !important;
+        }
+
+        .careerInfo {
+            padding-bottom: 20px;
+        }
+
+        .hoverArea p {
+            padding: 13px;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .filterHeading h4 {
+            font-size: 16px;
+        }
+
+        .tagList ul li span {
+            font-size: 14px;
+        }
+
+        .tagList ul li small {
+            padding: 2px 0px 0px;
+            width: 30px;
+            font-size: 12px;
+        }
+
+        .all-caption.stateLin-text {
+            padding-top: 10px;
+        }
+
+        .resourcePage {
+            padding: 40px 20px;
+        }
+
+        .slotarea ul li {
+            width: 32%;
+        }
+
+        .mortgageCalculator h4, .mortgageCalculatorResult h4 {
+            font-size: 18px;
+        }
+
+        .mortgageCalculator {
+            padding-top: 20px;
+        }
+
+        .twoButton p {
+            color: #878787;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 28px;
+            padding: 25px 0;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        .bellow-content p {
+            font-size: 12px;
+            line-height: 24px;
+        }
+
+        .all-caption.contactText .timeNoMail p {
+            font-size: 14px;
+            padding: 10px 0 0 11px;
+        }
+
+        .freddyInfo {
+            padding: 0 0 0 33px;
+        }
+
+        .all-caption .freddycliktext .btn {
+            font-size: 12px;
+            padding: 6px 25px;
+        }
+
+        .careerPage {
+            padding: 30px 30px;
+        }
+
+        .hoverArea {
+            padding: 60px 15px 40px;
+            transition: 0.3s;
+            height: 250px;
+        }
+
+            .hoverArea h3 {
+                font-size: 18px;
+            }
+
+        .form-btn .btn {
+            padding: 6px 0;
+        }
+
+        .careerDetailsPage {
+            padding: 40px 50px;
+        }
+
+        .all-caption h2 {
+            font-size: 25px;
+        }
+
+        .blogDetailsPage {
+            padding: 40px 100px;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 90%;
+        }
+
+        .agentExperience {
+            padding: 40px 30px;
+        }
+
+        .affiliatedbusinessesPage {
+            padding: 60px 60px;
+        }
+
+        .hikPage {
+            padding: 40px 20px;
+        }
+
+        .comm-opt-out {
+            padding: 40px 60px;
+        }
+
+        .siteaccessibilityPage {
+            padding: 40px 40px;
+            height: auto;
+        }
+
+        .termofUse {
+            padding: 40px 40px;
+        }
+
+        .disclosuresLicenses {
+            padding: 40px 60px;
+        }
+
+        .privacypolicy {
+            padding: 40px 30px;
+        }
+
+        .reviewDetailsPage {
+            padding: 60px 30px;
+        }
+
+        .gbbox a.btn {
+            font-size: 12px;
+            padding: 6px 24px;
+        }
+
+        .threebox {
+            padding: 120px 15px 0;
+        }
+
+        .scheduleBox {
+            padding: 45px 8px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .IndexRatecenter {
+            border: 0px solid #FFFFff;
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .banner-bg,
+        .header .navbar {
+            padding: 0 15px;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 35px 0;
+        }
+
+        .all-caption.client-caption {
+            padding: 0;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+        }
+
+        .all-caption h2 {
+            font-size: 30px;
+        }
+
+        .all-caption p {
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        .all-caption .btn {
+            font-size: 14px;
+            padding: 8px 40px;
+            width: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .table-div {
+            height: 75vh;
+        }
+
+        .about-us-img img {
+            width: 65%;
+            display: inline;
+        }
+
+        .all-caption.about-caption {
+            padding-top: 35px;
+        }
+
+        .rate-img img {
+            width: 100%;
+        }
+
+        .all-caption.rate-today {
+            padding-top: 13px;
+        }
+
+        .today-rates-section::before {
+            background-size: 162%;
+            background-position: right bottom;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            left: -245px;
+            top: 420px;
+            transform: rotate(0);
+        }
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 90%;
+            margin-top: 30px;
+        }
+
+        .testimonial::before {
+            background-size: 100%;
+            bottom: -90px;
+        }
+
+        .home-form {
+            margin: 10px 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 13px;
+            }
+
+        .other-links h3 {
+            font-size: 17px;
+            padding-top: 5px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 14px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 14px;
+        }
+
+        .contactusPage {
+            padding: 60px 0px;
+        }
+
+            .contactusPage .p-0 {
+                padding: 0px 15px !important;
+            }
+
+        .contactusImage img {
+            width: 75%;
+            margin: 0 auto 30px;
+        }
+
+        .signin-page {
+            padding: 45px 50px 45px;
+        }
+
+        .leftSideContent {
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .form-area h4 {
+            font-size: 15px;
+            line-height: 23px;
+        }
+
+        .register-page {
+            width: 100%;
+            margin: 50px auto 50px;
+        }
+
+        .form-heading h2 {
+            font-size: 30px;
+        }
+
+        .form-area .form-group.check-c-box {
+            padding-top: 10px;
+        }
+
+        .eyeShowHide {
+            font-size: 14px;
+        }
+
+        .register-form-btn a {
+            padding: 0 0 15px;
+            font-size: 14px;
+        }
+
+        .start-page {
+            padding: 100px 0;
+        }
+
+        .start-heading h3 {
+            font-size: 40px;
+        }
+
+        .start-heading h4 {
+            font-size: 20px;
+            padding: 20px 0 30px;
+        }
+
+        .orText p {
+            margin: 0;
+            font-size: 14px;
+            padding: 10px 30px;
+        }
+
+        .about-page {
+            padding: 40px 20px;
+        }
+
+        .about-img-side img {
+            padding-bottom: 0px;
+        }
+
+        .bellow-content {
+            padding-top: 40px;
+        }
+
+            .bellow-content h3 {
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+
+        .careerImage img {
+            width: 100%;
+            margin: 0;
+        }
+
+        .bellow-content p {
+            font-size: 14px;
+            padding-bottom: 30px;
+        }
+
+        .bottom-other-links ul li {
+            padding: 0 8px 0 0;
+        }
+
+        .copyright-text {
+            padding: 0 15px 30px;
+        }
+
+        .blogSideHeight .bellow-content p {
+            font-size: 14px;
+            padding: 0;
+        }
+
+        .blogBtn .btn {
+            margin-top: 30px;
+        }
+
+        .homeLender li.nav-item {
+            width: 50%;
+        }
+
+        .tabsHeading h3 {
+            font-size: 30px;
+        }
+
+        .homeLender .nav-pills .nav-link {
+            padding: 10px 39px;
+            font-size: 16px;
+        }
+
+        .lenderContent p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .lenderContent h4 {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .lenderContent {
+            padding: 18px 0;
+        }
+
+        .lenderImg {
+            text-align: left;
+        }
+
+        .read-point.upper-text {
+            padding-top: 15px;
+            text-align: left;
+            padding: 18px 0 0 70px;
+        }
+
+        .right-button-group .signin a {
+            padding: 6px 8px 0;
+            font-size: 13px;
+        }
+
+        .careerPage {
+            padding: 60px 20px;
+        }
+
+        .all-caption.careerText {
+            padding: 45px 0 0;
+        }
+
+        .careerPage {
+            padding: 30px 20px;
+        }
+
+        .careerInfo {
+            padding-bottom: 20px;
+        }
+
+        .right-button-group .getstarted a.c-bg-btn {
+            font-size: 12px;
+            padding: 3px 16px;
+            margin: 4px 8px 0 0;
+        }
+
+        .right-button-group .signin a {
+            padding: 2px 15px 0;
+            font-size: 13px;
+        }
+
+        .header {
+            padding-bottom: 50px;
+        }
+
+        .navbar-toggler {
+            padding: 0 6px;
+        }
+
+        .findAnExpert-page {
+            padding: 40px 0;
+        }
+
+        .header .main-logo img {
+            width: 91px;
+            margin-right: 0;
+        }
+
+        .disclosuresLicenses {
+            padding: 30px 20px;
+        }
+
+        .right-button-group .getstarted a.c-bg-btn {
+            margin: 0;
+        }
+
+        .leftsidemenubarinner .nav-link {
+            padding: 1rem;
+        }
+
+        .leftsidemenubarinner .dropdown-menu {
+            position: relative !important;
+            transform: translate(0) !important;
+            border: 1px solid #b2b2b226;
+        }
+
+        .leftsidemenubarinner .dropdown-item {
+            padding: 8px 20px;
+            font-size: 15px;
+        }
+
+        div#map {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .all-caption.findAnEx-text {
+            padding-top: 0px;
+        }
+
+        .findAnEximg {
+            width: 100%;
+        }
+
+        .agentprofilePage {
+            padding: 20px 10px;
+        }
+
+        .realagentPage {
+            padding: 40px 10px;
+        }
+
+        .agentImage img {
+            width: 80%;
+            margin: 0px 0;
+        }
+
+        .agentbookingPage {
+            padding: 30px 0px;
+        }
+
+        .slotarea ul li label {
+            font-size: 12px;
+        }
+
+            .slotarea ul li label span {
+                font-size: 13px;
+                display: block;
+            }
+
+        .agentslot h3 {
+            font-size: 28px;
+        }
+
+        .slotarea ul li {
+            width: 48%;
+        }
+
+        .agentslot {
+            margin: 30px 0 10px;
+        }
+
+        .mortgageCalculatorPage {
+            padding: 30px 25px 0px;
+        }
+
+        .radioBoxDiv {
+            width: 100%;
+        }
+
+        .yesBox .onSelect {
+            padding: 8px 59px;
+        }
+
+        .purchasePage {
+            padding: 40px 20px 20px;
+        }
+
+        .twoButton .btn {
+            padding: 8px 24px;
+            font-size: 14px;
+        }
+
+        .zipCode,
+        .cScore,
+        .pPrice,
+        .dPayment,
+        .pType {
+            padding-bottom: 15px;
+        }
+
+        .freddyInfo {
+            padding: 0 0 0 0px;
+        }
+
+        .careerDetailsPage {
+            padding: 20px 20px;
+        }
+
+        .blogDetailsPage {
+            padding: 40px 20px;
+        }
+
+        .blogDetailsContent h3 {
+            font-size: 20px;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 100%;
+        }
+
+        .applyModal .close {
+            top: 8%;
+        }
+
+        .affiliatedbusinessesPage {
+            padding: 30px 20px;
+        }
+
+        .comm-opt-out {
+            padding: 30px 20px;
+        }
+
+        .siteaccessibilityPage {
+            padding: 30px 20px;
+            height: auto;
+        }
+
+        .termofUse {
+            padding: 30px 20px;
+        }
+
+        .agentExperience {
+            padding: 30px 20px;
+        }
+
+        .privacypolicy {
+            padding: 30px 20px;
+        }
+
+        .reviewDetailsPage {
+            padding: 30px 20px;
+        }
+
+        .all-caption.banner-caption p {
+            text-align: center;
+            padding: 0;
+        }
+
+        .all-caption.banner-caption h2 {
+            text-align: center;
+        }
+
+        .lenderDetails ul li {
+            list-style: none;
+            width: 48%;
+            background: #fff;
+            border: 1px solid #E0E0E6;
+            margin: 3px;
+            border-radius: 4px;
+            padding: 0px;
+            float: left;
+        }
+
+        .homelistbtn .btn {
+            margin: 30px 0;
+        }
+
+        .owl-carousel .owl-stage-outer {
+            height: 450px;
+        }
+
+        .mortadvisorPage {
+            padding: 30px 10px;
+        }
+
+        .threebox {
+            padding: 20px 10px 0;
+        }
+
+        .scheduleBox {
+            padding: 45px 15px;
+            margin-bottom: 10px;
+        }
+
+        .bgBlue {
+            padding: 40px 10px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .banner-bg,
+        .header .navbar {
+            padding: 0 15px;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 35px 0;
+        }
+
+        .all-caption.client-caption {
+            padding: 0 0 35px;
+        }
+
+        .header .main-logo img {
+            width: 101px;
+            margin-right: 0;
+        }
+
+        .twoButton .btn {
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+        }
+
+        .all-caption h2 {
+            font-size: 30px;
+        }
+
+        .all-caption p {
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        .all-caption .btn {
+            font-size: 14px;
+            padding: 8px 40px;
+            margin-top: 20px;
+        }
+
+        .table-div {
+            height: 75vh;
+        }
+
+        .about-us-img img {
+            width: 65%;
+            display: inline;
+        }
+
+        .all-caption.about-caption {
+            padding-top: 35px;
+        }
+
+        .rate-img img {
+            width: 100%;
+        }
+
+        .all-caption.rate-today {
+            padding-top: 13px;
+        }
+
+        .today-rates-section::before {
+            background-size: 162%;
+            background-position: right bottom;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            left: -185px;
+            top: 500px;
+            transform: rotate(0);
+        }
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 90%;
+            margin-top: 30px;
+        }
+
+        .testimonial::before {
+            background-size: 100%;
+            bottom: -219px;
+        }
+
+        .home-form {
+            margin: 10px 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 14px;
+            }
+
+        .other-links h3 {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 14px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 14px;
+        }
+
+        .signin-page {
+            padding: 45px 10px 45px;
+        }
+
+        .form-heading h2 {
+            font-size: 25px;
+        }
+
+        .all-caption.banner-caption h2 {
+            font-size: 40px;
+        }
+
+        .homeLender li.nav-item {
+            width: 50%;
+        }
+
+        .tabsHeading h3 {
+            font-size: 30px;
+        }
+
+        .homeLender .nav-pills .nav-link {
+            padding: 10px 39px;
+            font-size: 16px;
+        }
+
+        .lenderContent h4,
+        .lenderContent p {
+            text-align: left;
+        }
+
+        .lenderContent {
+            padding: 18px 0;
+        }
+
+        .lenderImg {
+            text-align: left;
+        }
+
+        .read-point.upper-text {
+            padding-top: 15px;
+            text-align: left;
+            padding: 18px 0 0 70px;
+        }
+
+        .header .main-logo img {
+            width: 83px;
+            margin-right: 0;
+        }
+
+        .slotarea ul li {
+            width: 47%;
+        }
+
+        .all-caption.contactText .timeNoMail p {
+            font-size: 12px;
+            padding: 10px 0 0 11px;
+        }
+
+        .all-caption .freddycliktext .btn {
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+
+        .all-caption h2 {
+            font-size: 25px;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .banner-bg {
+            padding: 0 15px;
+        }
+
+        .twoButton .btn {
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+
+        .header .navbar {
+            padding: 0 10px;
+        }
+
+        .about-us-section,
+        .footer,
+        .home-form,
+        .testimonial,
+        .today-rates-section {
+            padding: 35px 0;
+        }
+
+        .all-caption.client-caption {
+            padding: 0 0 35px;
+        }
+
+        .header .main-logo img {
+            width: 75px;
+            margin-right: 0;
+        }
+
+        .all-caption h4 {
+            font-size: 15px;
+        }
+
+        .all-caption h2 {
+            font-size: 30px;
+        }
+
+        .all-caption p {
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        .all-caption .btn {
+            font-size: 13px;
+            padding: 8px 0;
+            margin-top: 20px;
+            width: 40%;
+        }
+
+        .table-div {
+            height: 75vh;
+        }
+
+        .about-us-img img {
+            width: 65%;
+            display: inline;
+        }
+
+        .all-caption.about-caption {
+            padding-top: 35px;
+        }
+
+        .rate-img img {
+            width: 100%;
+        }
+
+        .all-caption.rate-today {
+            padding-top: 13px;
+        }
+
+        .today-rates-section::before {
+            background-size: 162%;
+            background-position: right bottom;
+        }
+
+        .testimonial-section.owl-carousel .item {
+            margin-top: 0;
+        }
+
+        .testimonial-section.owl-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            left: -185px;
+            top: 500px;
+            transform: rotate(0);
+        }
+
+        .testimonial-section.owl-carousel .client-img img {
+            width: 90%;
+            margin-top: 30px;
+        }
+
+        .testimonial::before {
+            background-size: 100%;
+            bottom: -219px;
+        }
+
+        .home-form {
+            margin: 10px 0 0;
+        }
+
+        .logo-side img {
+            width: 45%;
+        }
+
+        .logo-side ul li {
+            padding-bottom: 10px;
+        }
+
+            .logo-side ul li a {
+                font-size: 15px;
+            }
+
+        .other-links ul {
+            margin: 10px 0 0;
+        }
+
+            .other-links ul li a {
+                font-size: 14px;
+            }
+
+        .other-links h3 {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .other-links ul li {
+            line-height: 30px;
+        }
+
+            .other-links ul li p {
+                font-size: 14px;
+                padding-bottom: 10px;
+                line-height: 30px;
+            }
+
+            .other-links ul li h4 {
+                font-size: 17px;
+            }
+
+        .copyright-text p {
+            font-size: 14px;
+        }
+
+        .form-heading h2 {
+            font-size: 25px;
+        }
+
+        .getagentbtn .btn {
+            padding: 8px 0;
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .right-button-group .getstarted a.c-bg-btn {
+            font-size: 12px;
+            padding: 4px 12px;
+            margin: 4px 8px 0 0;
+        }
+
+        .disclosuresLicenses {
+            padding: 30px 0px;
+        }
+
+        .resourcePage {
+            padding: 20px 0px;
+        }
+
+        .applyModal .modal-dialog {
+            max-width: 100%;
+        }
+
+        .right-button-group .signin a {
+            padding: 7px 15px 0;
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        #chartContainer0 gImage {
+            width: 400px;
+            height: auto !important;
+        }
+    }
